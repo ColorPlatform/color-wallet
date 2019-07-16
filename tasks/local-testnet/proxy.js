@@ -9,7 +9,7 @@
 // parse command line options
 const options = {
   port: 9071,
-  target: `http://localhost:9070`
+  target: `http://localhost:1317`
 }
 
 // Start the proxy

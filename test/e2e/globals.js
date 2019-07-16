@@ -13,7 +13,7 @@ module.exports = {
     let apiUp = false
     while (!apiUp) {
       try {
-        await axios(`http://${HOST}:9070/node_version`)
+        await axios(`http://${HOST}:1317/node_version`)
         apiUp = true
       } catch (err) {
         await new Promise(resolve => setTimeout(resolve, 1000))

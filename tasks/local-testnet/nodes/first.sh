@@ -30,7 +30,7 @@ echo ${NODEID} >> ${HOME}/id.txt
 gaiad start --home ${HOME} > /dev/null & (
   sleep 3s &&
   (
-    gaiacli rest-server --home ${HOME} --chain-id ${NETWORK} --trust-node true --laddr tcp://0.0.0.0:${API_PORT} &
+    gaiacli rest-server --home ${HOME} --chain-id ${NETWORK} --trust-node true --laddr tcp://0.0.0.0 :${API_PORT} &
     sh /etc/nodes/faucet.sh $HOME &
 
     counter=1

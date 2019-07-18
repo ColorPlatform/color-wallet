@@ -28,9 +28,11 @@ function convertWsArgs(args = {}) {
 }
 
 class Client extends EventEmitter {
-  constructor(uriString = `ec2-3-15-152-52.us-east-2.compute.amazonaws.com:26657`) {
+  constructor(
+    uriString = `ec2-3-15-152-52.us-east-2.compute.amazonaws.com:26657`
+  ) {
     super()
-    
+
     // parse full-node URI
     let { protocol, hostname, port } = url.parse(uriString)
 

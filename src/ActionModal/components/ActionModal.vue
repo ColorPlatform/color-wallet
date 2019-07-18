@@ -507,6 +507,7 @@ export default {
       try {
         this.gasEstimate = await this.actionManager.simulate(memo)
         this.step = feeStep
+        console.log(this.gasEstimate)
       } catch ({ message }) {
         this.submissionError = `${this.submissionErrorPrefix}: ${message}.`
       }
@@ -541,11 +542,13 @@ export default {
       }
 
       const feeProperties = {
-        gasEstimate: this.gasEstimate,
+        gasEstimate: this.gasEstimate+10000,
         gasPrice: gasPrice,
         submitType: this.selectedSignMethod,
         password: this.password
       }
+
+      console.log(feeProperties)
 
       try {
         const { included, hash } = await this.actionManager.send(
@@ -609,6 +612,7 @@ export default {
         between: between(0, this.balanceInAtoms)
       }
     }
+    console.log(gasPrice)
   }
 }
 </script>

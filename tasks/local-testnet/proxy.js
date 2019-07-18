@@ -9,7 +9,8 @@
 // parse command line options
 const options = {
   port: 9071,
-  target: `http://localhost:1317`
+  target: `http://ec2-3-15-152-52.us-east-2.compute.amazonaws.com:1317`,
+  host: `ec2-3-15-152-52.us-east-2.compute.amazonaws.com`
 }
 
 // Start the proxy
@@ -63,7 +64,7 @@ proxy.on(`proxyRes`, function(proxyRes, req, res) {
 
 const fs = require(`fs`),
   { join } = require(`path`),
-  https = require(`https`)
+  http = require(`http`)
 
 const privateKey = fs
   .readFileSync(join(__dirname, `../../certs/dev.key`))
@@ -72,7 +73,7 @@ const certificate = fs
   .readFileSync(join(__dirname, `../../certs/dev.crt`))
   .toString()
 
-const server = https.createServer(
+const server = http.createServer(
   {
     key: privateKey,
     cert: certificate

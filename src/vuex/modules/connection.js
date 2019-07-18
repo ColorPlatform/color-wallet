@@ -93,7 +93,7 @@ export default function({ node }) {
           chain_id: status.node_info.network
         })
 
-        if (status.node_info.network === `testing`) {
+        if (status.node_info.network === `chain-sdL7zQ`) {
           commit(`setInsecureMode`)
         }
       })

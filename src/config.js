@@ -1,7 +1,7 @@
 const dev = process.env.NODE_ENV === `development`
 const stargate =
   process.env.STARGATE ||
-  (dev ? `https://localhost:9071` : `https://stargate.lunie.io`)
+  (dev ? `https://ec2-18-221-33-218.us-east-2.compute.amazonaws.com:9071` : `https://stargate.lunie.io`)
 
 const rpc =
   process.env.RPC || (dev ? `localhost:26657` : `https://rpc.lunie.io:26657`)

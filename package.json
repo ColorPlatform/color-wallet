@@ -26,7 +26,7 @@
     "test": "npm run lint && npm run test:unit && npm run test:e2e",
     "test:unit": "cross-env NODE_ENV=testing jest --maxWorkers=2",
     "test:e2e:build": "cross-env E2E_TESTS=true STARGATE=http://localhost:1317 RPC=http://localhost:26657 CIRCLECI=true npm run build:ui",
-    "test:e2e:serve": "cross-env E2E_TESTS=true STARGATE=http://localhost:1317 RPC=http://localhost:26657 NODE_ENV=production webpack-dev-server --colors --config webpack.config.js --port 9080 --host=ec2-3-15-152-52.us-east-2.compute.amazonaws.com --https --mode=production --cert 'certs/dev.crt' --key 'certs/dev.key'",
+    "test:e2e:serve": "cross-env E2E_TESTS=true STARGATE=http://localhost:1317 RPC=http://localhost:26657 NODE_ENV=production webpack-dev-server --colors --config webpack.config.js --port 9080 --host=ec2-3-15-152-52.us-east-2.compute.amazonaws.com  --mode=production --cert 'certs/dev.crt' --key 'certs/dev.key'",
     "test:e2e:run": "nightwatch --config ./test/e2e/nightwatch.conf.js",
     "test:e2e": "npm run test:e2e:serve & npm run test:e2e:run",
     "test:coverage": "live-server test/unit/coverage/lcov-report",
@@ -35,7 +35,7 @@
     "testnet:stop": "docker stop testnet",
     "proxy": "node ./tasks/local-testnet/proxy.js",
     "certificates": "docker-compose -f tasks/certificates/docker-compose.yml up",
-    "frontend": "cross-env NODE_ENV=development webpack-dev-server --hot --colors --config webpack.config.js --port 9080 --host=ec2-18-221-33-218.us-east-2.compute.amazonaws.com --https --mode=development --cert 'certs/dev.crt' --key 'certs/dev.key'",
+    "frontend": "cross-env NODE_ENV=development webpack-dev-server --hot --colors --config webpack.config.js --port 9080 --host=ec2-18-221-33-218.us-east-2.compute.amazonaws.com  --mode=development --cert 'certs/dev.crt' --key 'certs/dev.key'",
     "changelog": "simsala log --pending-path ./changes",
     "release": "git checkout develop & git pull & git push origin develop:release"
   },

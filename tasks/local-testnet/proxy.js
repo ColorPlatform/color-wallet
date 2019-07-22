@@ -9,7 +9,7 @@
 // parse command line options
 const options = {
   port: 9071,
-  target: `  http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:1317`,
+  target: `http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:1317`,
   host: `ec2-18-221-56-0.us-east-2.compute.amazonaws.com`
 }
 

@@ -542,7 +542,7 @@ export default {
       }
 
       const feeProperties = {
-        gasEstimate: this.gasEstimate+10000,
+        gasEstimate: this.gasEstimate + 10000,
         gasPrice: gasPrice,
         submitType: this.selectedSignMethod,
         password: this.password

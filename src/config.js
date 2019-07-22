@@ -2,13 +2,13 @@ const dev = process.env.NODE_ENV === `development`
 const stargate =
   process.env.STARGATE ||
   (dev
-    ? `http://ec2-18-221-33-218.us-east-2.compute.amazonaws.com:9071`
+    ? `http://ec2-18-221-56-0.us-east-2.compute.amazonaws.com:9071`
     : `https://stargate.lunie.io`)
-    
+
 const rpc =
   process.env.RPC ||
   (dev
-    ? `ec2-18-221-33-218.us-east-2.compute.amazonaws.com:26657`
+    ? `ec2-18-221-56-0.us-east-2.compute.amazonaws.com:26657`
     : `https://rpc.lunie.io:26657`)
 
 export default {
@@ -21,7 +21,7 @@ export default {
   sentry_dsn: process.env.SENTRY_DSN || "",
   node_halted_timeout: 120000,
   block_timeout: 10000,
-  default_gas_price: dev ?  2.5e-8: 2.5e-8, // recommended from Cosmos Docs
+  default_gas_price: dev ? 2.5e-8 : 2.5e-8, // recommended from Cosmos Docs
   version: process.env.RELEASE,
 
   // Ledger

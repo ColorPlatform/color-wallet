@@ -102,10 +102,10 @@
       </div>
 
       <div v-if="proposal.proposal_status === 'VotingPeriod'" class="row marginbottom">
-        <dl v-if="displayEndDate" class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <!-- <dl v-if="displayEndDate" class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <dt>Voting End Date</dt>
           <dd>{{ endDate }}</dd>
-        </dl>
+        </dl> -->
         <dl
           v-if="proposal.proposal_status === 'VotingPeriod'"
           class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12"
@@ -234,10 +234,12 @@ export default {
     votingStartedAgo({ proposal } = this) {
       return moment.utc(new Date(proposal.voting_start_time)).format(`MMM Do YYYY, HH:mm:ssa z`)
     },
-    proposalStatus({ proposal, depositEndsIn, votingStartedAgo } = this) {
-      if (proposal.proposal_status === "DepositPeriod") {
-        return `Deposit period ends at ${depositEndsIn}`
-      } else if (proposal.proposal_status === "VotingPeriod") {
+    proposalStatus({ proposal, votingStartedAgo } = this) {
+      // if (proposal.proposal_status === "DepositPeriod") {
+      //   return `Deposit period ends at ${depositEndsIn}`
+      // } 
+      // else 
+      if (proposal.proposal_status === "VotingPeriod") {
         return `Voting started at ${votingStartedAgo}`
       } else if (proposal.proposal_status === "Rejected") {
         return "Rejected"
@@ -247,9 +249,9 @@ export default {
         return false
       }
     },
-    depositEndsIn({ proposal } = this) {
-      return moment.utc(new Date(proposal.deposit_end_time)).format(`MMM Do YYYY, HH:mm:ssa z`)
-    },
+    // depositEndsIn({ proposal } = this) {
+    //   return moment.utc(new Date(proposal.deposit_end_time)).format(`MMM Do YYYY, HH:mm:ssa z`)
+    // },
     totalVotes({ tally: { yes, no, no_with_veto, abstain } } = this) {
       return BigNumber(yes)
         .plus(no)

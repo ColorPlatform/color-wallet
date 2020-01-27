@@ -111,19 +111,19 @@
           class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12"
         >
           <dt>Total Vote Count</dt>
-          <dd>{{ num.shortDecimals(num.atoms(totalVotes)) }}</dd>
+          <dd>{{ totalVotes }}</dd>
         </dl>
         <dl class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <dt>Yes</dt>
           <dd>
-            {{ num.shortDecimals(num.atoms(tally.yes)) }} /
+            {{ num.shortDecimals(tally.yes) }} /
             {{ yesPercentage }}
           </dd>
         </dl>
         <dl class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <dt>No</dt>
           <dd>
-            {{ num.shortDecimals(num.atoms(tally.no)) }} /
+            {{ num.shortDecimals(tally.no) }} /
             {{ noPercentage }}
           </dd>
         </dl>
@@ -137,7 +137,7 @@
         <dl class="info_dl col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <dt>Abstain</dt>
           <dd>
-            {{ num.shortDecimals(num.atoms(tally.abstain)) }} /
+            {{ num.shortDecimals(tally.abstain) }} /
             {{ abstainPercentage }}
           </dd>
         </dl>
@@ -252,12 +252,13 @@ export default {
     // depositEndsIn({ proposal } = this) {
     //   return moment.utc(new Date(proposal.deposit_end_time)).format(`MMM Do YYYY, HH:mm:ssa z`)
     // },
-    totalVotes({ tally: { yes, no, no_with_veto, abstain } } = this) {
+    totalVotes({ tally: { yes, no, abstain } } = this) {
+      console.log(this.tally.yes,"========")
       return BigNumber(yes)
         .plus(no)
-        .plus(no_with_veto)
         .plus(abstain)
         .toNumber()
+        // .plus(no_with_veto)
     },
     yesPercentage({ tally, totalVotes } = this) {
       return num.percentInt(totalVotes === 0 ? 0 : tally.yes / totalVotes)
@@ -265,22 +266,23 @@ export default {
     noPercentage({ tally, totalVotes } = this) {
       return num.percentInt(totalVotes === 0 ? 0 : tally.no / totalVotes)
     },
-    noWithVetoPercentage({ tally, totalVotes } = this) {
-      return num.percentInt(
-        totalVotes === 0 ? 0 : tally.no_with_veto / totalVotes
-      )
-    },
+    // noWithVetoPercentage({ tally, totalVotes } = this) {
+    //   return num.percentInt(
+    //     totalVotes === 0 ? 0 : tally.no_with_veto / totalVotes
+    //   )
+    // },
     abstainPercentage({ tally, totalVotes } = this) {
       return num.percentInt(totalVotes === 0 ? 0 : tally.abstain / totalVotes)
     },
     tally({ proposals, proposalId } = this) {
-      const { yes, no, abstain, no_with_veto } =
+      const { yes, no, abstain } =
         proposals.tallies[proposalId] || {}
+        
       return {
         yes: yes || BigNumber(0),
         no: no || BigNumber(0),
         abstain: abstain || BigNumber(0),
-        no_with_veto: no_with_veto || BigNumber(0)
+        // no_with_veto: no_with_veto || BigNumber(0)
       }
     },
     status({ proposal } = this) {

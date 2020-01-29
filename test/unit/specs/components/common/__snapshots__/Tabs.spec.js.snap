@@ -2,24 +2,32 @@
 
 exports[`Tabs has the expected html structure 1`] = `
 <div
-  class="tabs"
-/>
+  class="row"
+>
+  <div
+    class="tabs"
+  />
+</div>
 `;
 
 exports[`Tabs should show links to other pages 1`] = `
 <div
-  class="tabs"
+  class="row"
 >
   <div
-    class="tab tab-selected"
+    class="tabs"
   >
-    <router-link-stub
-      to="[object Object]"
+    <div
+      class="tab tab-selected"
     >
+      <router-link-stub
+        to="[object Object]"
+      >
+        
+        one
       
-      one
-    
-    </router-link-stub>
+      </router-link-stub>
+    </div>
   </div>
 </div>
 `;

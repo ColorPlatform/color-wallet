@@ -20,7 +20,7 @@ describe(`Module: Fee Distribution`, () => {
     }
   }
   const rewards = {
-    stake: 100,
+    CLR: 100,
     photino: 15
   }
 

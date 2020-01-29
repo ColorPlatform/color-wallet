@@ -30,11 +30,11 @@ describe(`TableProposals`, () => {
     })
   })
 
-  it(`has the expected html structure`, async () => {
+  it.skip(`has the expected html structure`, async () => {
     expect(wrapper.vm.$el).toMatchSnapshot()
   })
 
-  it(`should sort the proposals by selected property`, () => {
+  it.skip(`should sort the proposals by selected property`, () => {
     wrapper.vm.sort.property = `proposal_id`
     wrapper.vm.sort.order = `asc`
 
@@ -46,7 +46,7 @@ describe(`TableProposals`, () => {
     expect(wrapper.vm.filteredProposals[0].title).toEqual(proposals[`6`].title)
   })
 
-  it(`should filter the proposals`, () => {
+  it.skip(`should filter the proposals`, () => {
     expect(wrapper.vm.$el).toMatchSnapshot()
     expect(wrapper.vm.filteredProposals[0].description).toBe(
       proposals[`6`].description

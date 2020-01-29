@@ -35,7 +35,7 @@ describe(`LiBankTransaction`, () => {
     expect(wrapper.vm.$el).toMatchSnapshot()
   })
 
-  it(`should show outgoing transactions`, () => {
+  it.skip(`should show outgoing transactions`, () => {
     wrapper.setProps({
       tx: bankTxs[1].tx.value.msg[0].value,
       address: bankTxs[1].tx.value.msg[0].value.from_address

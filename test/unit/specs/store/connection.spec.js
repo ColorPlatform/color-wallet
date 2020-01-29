@@ -233,7 +233,7 @@ describe(`Module: Connection`, () => {
       dispatch: jest.fn()
     })
 
-    expect(commit).toHaveBeenCalledWith(`setInsecureMode`)
+    expect(commit).toHaveBeenCalledWith(`setConnected`, true)
   })
 
   it(`should react to status updates`, async () => {

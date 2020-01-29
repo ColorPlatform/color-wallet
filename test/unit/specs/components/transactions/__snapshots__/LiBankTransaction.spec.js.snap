@@ -115,7 +115,7 @@ exports[`LiBankTransaction should show outgoing transactions 1`] = `
    
   <span>
     
-        To
+        To  
         
     <bech32-stub
       address="A"

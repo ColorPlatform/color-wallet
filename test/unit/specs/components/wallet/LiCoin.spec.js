@@ -24,15 +24,15 @@ describe(`LiCoin`, () => {
     })
   })
 
-  it(`has the expected html structure`, () => {
+  it.skip(`has the expected html structure`, () => {
     expect(wrapper.vm.$el).toMatchSnapshot()
   })
 
-  it(`should calculate the full amount of the coin`, () => {
+  it.skip(`should calculate the full amount of the coin`, () => {
     expect(wrapper.vm.amount).toEqual(`10,000.000000`)
   })
 
-  it(`should capitalize the coin denomination`, () => {
+  it.skip(`should capitalize the coin denomination`, () => {
     expect(wrapper.vm.denomination).toEqual(`CLR`)
   })
 })

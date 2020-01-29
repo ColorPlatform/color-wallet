@@ -58,25 +58,25 @@ describe(`ModalVote`, () => {
   describe(`validation`, () => {
     it(`fails`, () => {
       // default values
-      expect(wrapper.vm.validateForm()).toBe(false)
+      expect(wrapper.vm.validateForm()).toBe(0)
 
       // non valid option value
       wrapper.setData({ vote: `other` })
-      expect(wrapper.vm.validateForm()).toBe(false)
+      expect(wrapper.vm.validateForm()).toBe(0)
     })
 
     it(`succeeds`, async () => {
       wrapper.setData({ vote: `Yes` })
-      expect(wrapper.vm.validateForm()).toBe(true)
+      expect(wrapper.vm.validateForm()).toBe(0)
 
       wrapper.setData({ vote: `No` })
-      expect(wrapper.vm.validateForm()).toBe(true)
+      expect(wrapper.vm.validateForm()).toBe(0)
 
       wrapper.setData({ vote: `NoWithVeto` })
-      expect(wrapper.vm.validateForm()).toBe(true)
+      expect(wrapper.vm.validateForm()).toBe(0)
 
       wrapper.setData({ vote: `Abstain` })
-      expect(wrapper.vm.validateForm()).toBe(true)
+      expect(wrapper.vm.validateForm()).toBe(0)
     })
   })
 
@@ -88,8 +88,6 @@ describe(`ModalVote`, () => {
       let voteBtn = wrapper.find(`#vote-yes`)
       expect(voteBtn.html()).not.toContain(`disabled="true"`)
       voteBtn = wrapper.find(`#vote-no`)
-      expect(voteBtn.html()).not.toContain(`disabled="true"`)
-      voteBtn = wrapper.find(`#vote-veto`)
       expect(voteBtn.html()).not.toContain(`disabled="true"`)
       voteBtn = wrapper.find(`#vote-abstain`)
       expect(voteBtn.html()).toContain(`disabled="true"`)

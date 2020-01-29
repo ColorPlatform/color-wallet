@@ -5,7 +5,7 @@ exports[`SendModal should display send modal form 1`] = `
   denom="CLR"
   id="send-modal"
   notifymessage="[object Object]"
-  submissionerrorprefix="Sending tokens failed"
+  submissionerrorprefix="Transaction failed"
   title="Send"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -53,7 +53,7 @@ exports[`SendModal should display send modal form 1`] = `
     />
      
     <tmformmsg-stub
-      msg="doesn't have any s"
+      msg="doesn't have any "
       name="Wallet"
       type="custom"
     />
@@ -77,7 +77,7 @@ exports[`SendModal validation should show address required error 1`] = `
   denom="CLR"
   id="send-modal"
   notifymessage="[object Object]"
-  submissionerrorprefix="Sending tokens failed"
+  submissionerrorprefix="Transaction failed"
   title="Send"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -151,7 +151,7 @@ exports[`SendModal validation should show bech32 error when address length is to
   denom="CLR"
   id="send-modal"
   notifymessage="[object Object]"
-  submissionerrorprefix="Sending tokens failed"
+  submissionerrorprefix="Transaction failed"
   title="Send"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -225,7 +225,7 @@ exports[`SendModal validation should show bech32 error when address length is to
   denom="CLR"
   id="send-modal"
   notifymessage="[object Object]"
-  submissionerrorprefix="Sending tokens failed"
+  submissionerrorprefix="Transaction failed"
   title="Send"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -298,7 +298,7 @@ exports[`SendModal validation should show bech32 error when alphanumeric is wron
   denom="CLR"
   id="send-modal"
   notifymessage="[object Object]"
-  submissionerrorprefix="Sending tokens failed"
+  submissionerrorprefix="Transaction failed"
   title="Send"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -317,6 +317,7 @@ exports[`SendModal validation should show bech32 error when alphanumeric is wron
     />
      
     <tmformmsg-stub
+      color="white"
       msg=""
       name="Denomination"
       type="required"
@@ -357,7 +358,7 @@ exports[`SendModal validation should show bech32 error when alphanumeric is wron
     />
      
     <tmformmsg-stub
-      msg="doesn't have any s"
+      msg="doesn't have any "
       name="Wallet"
       type="custom"
     />

@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TableValidators has the expected html structure 1`] = `
-<div>
+<div
+  class="table-validator"
+>
   <table
-    class="data-table"
+    class="data-table table-responsive"
   >
     <thead>
       <panelsort-stub

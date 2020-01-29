@@ -23,7 +23,7 @@ exports[`LiStakeTransaction create validator with fees 1`] = `
    
   <div>
     
-      Moniker:
+      Node Name:
       
     <router-link-stub
       to="/validator/cosmosvaloper1qecshyc40kshszkwrtscgmsdd8tz3n4hrj9yf2"
@@ -58,7 +58,7 @@ exports[`LiStakeTransaction create validator without fees 1`] = `
    
   <div>
     
-      Moniker:
+      Node Name:
       
     <router-link-stub
       to="/validator/cosmosvaloper1qecshyc40kshszkwrtscgmsdd8tz3n4hrj9yf2"
@@ -84,7 +84,7 @@ exports[`LiStakeTransaction delegations with fees 1`] = `
       Delegated
       
     <b>
-      42000
+      42,000
     </b>
      
     <span>
@@ -119,7 +119,7 @@ exports[`LiStakeTransaction delegations without fees 1`] = `
       Delegated
       
     <b>
-      42000
+      42,000
     </b>
      
     <span>
@@ -158,7 +158,7 @@ exports[`LiStakeTransaction edit validator with fees 1`] = `
    
   <div>
     
-      Moniker:
+      Node Name:
       
     <router-link-stub
       to="/validator/cosmosvaloper1qecshyc40kshszkwrtscgmsdd8tz3n4hrj9yf2"
@@ -186,7 +186,7 @@ exports[`LiStakeTransaction edit validator without fees 1`] = `
    
   <div>
     
-      Moniker:
+      Node Name:
       
     <router-link-stub
       to="/validator/cosmosvaloper1qecshyc40kshszkwrtscgmsdd8tz3n4hrj9yf2"
@@ -477,7 +477,7 @@ exports[`LiStakeTransaction unjail with fees 1`] = `
    
   <div>
     
-      Moniker:
+      Node Name:
       
     <router-link-stub
       to="/validator/cosmosvaloper1qecshyc40kshszkwrtscgmsdd8tz3n4hrj9yf2"
@@ -505,7 +505,7 @@ exports[`LiStakeTransaction unjail without fees 1`] = `
    
   <div>
     
-      Moniker:
+      Node Name:
       
     <router-link-stub
       to="/validator/cosmosvaloper1qecshyc40kshszkwrtscgmsdd8tz3n4hrj9yf2"

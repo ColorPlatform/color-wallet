@@ -137,13 +137,13 @@ describe(`Store: getters`, () => {
           distribution: {
             rewards: {
               validator1: {
-                stake: 10000
+                CLR: 10000
               },
               validator2: {
-                stake: 5000
+                CLR: 5000
               },
               validator3: {
-                stake: 0
+                CLR: 0
               }
             }
           }
@@ -156,13 +156,13 @@ describe(`Store: getters`, () => {
       [
         "validator1",
         {
-          stake: 10000
+          CLR: 10000
         }
       ],
       [
         "validator2",
         {
-          stake: 5000
+          CLR: 5000
         }
       ]
     ])
@@ -176,13 +176,13 @@ describe(`Store: getters`, () => {
           [
             "validator1",
             {
-              stake: 10000
+              CLR: 10000
             }
           ],
           [
             "validator2",
             {
-              stake: 5000
+              CLR: 5000
             }
           ]
         ]

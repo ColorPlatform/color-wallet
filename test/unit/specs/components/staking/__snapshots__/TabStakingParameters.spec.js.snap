@@ -16,68 +16,70 @@ exports[`TabStakingParameters displays a message if loading 2`] = `
         class="row"
       >
         <div
-          class="column"
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl"
         >
-          <dl
-            class="info_dl"
-          >
-            <dt>
-              
-              Duration of Undelegation Period
-              
-              <i
-                class="material-icons info-button"
-              >
-                
-                info_outline
-              
-              </i>
-            </dt>
-             
-            <dd
-              id="unbonding_time"
+          <dt>
+            
+            Duration of Undelegation Period
+            
+            <i
+              class="material-icons info-button"
+              id="tooltip-target-4"
             >
               
-              3 days
+              info_outline
             
-            </dd>
-          </dl>
+            </i>
+             
+            <b-tooltip
+              target="tooltip-target-4"
+              triggers="hover"
+            >
+              
+              Time to complete an undelegation transaction and claim rewards
+            
+            </b-tooltip>
+          </dt>
            
-          <dl
-            class="info_dl"
+          <dd
+            id="unbonding_time"
           >
-            <dt>
-              Current Staking Token
-            </dt>
-             
-            <dd
-              id="bond_denom"
-            >
-              
-              CLR
             
-            </dd>
-          </dl>
+            3 days
+          
+          </dd>
         </div>
          
         <div
-          class="column"
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl"
         >
-          <dl
-            class="info_dl"
+          <dt>
+            Current Staking Token
+          </dt>
+           
+          <dd
+            id="bond_denom"
           >
-            <dt>
-              Maximum Number of Validators
-            </dt>
-             
-            <dd
-              id="max_validators"
-            >
-              
-              100
             
-            </dd>
-          </dl>
+            CLR
+          
+          </dd>
+        </div>
+         
+        <div
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl width"
+        >
+          <dt>
+            Maximum Number of Validators
+          </dt>
+           
+          <dd
+            id="max_validators"
+          >
+            
+            100
+          
+          </dd>
         </div>
       </div>
     </div>
@@ -97,68 +99,70 @@ exports[`TabStakingParameters displays a message if waiting for connection 2`] =
         class="row"
       >
         <div
-          class="column"
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl"
         >
-          <dl
-            class="info_dl"
-          >
-            <dt>
-              
-              Duration of Undelegation Period
-              
-              <i
-                class="material-icons info-button"
-              >
-                
-                info_outline
-              
-              </i>
-            </dt>
-             
-            <dd
-              id="unbonding_time"
+          <dt>
+            
+            Duration of Undelegation Period
+            
+            <i
+              class="material-icons info-button"
+              id="tooltip-target-4"
             >
               
-              3 days
+              info_outline
             
-            </dd>
-          </dl>
+            </i>
+             
+            <b-tooltip
+              target="tooltip-target-4"
+              triggers="hover"
+            >
+              
+              Time to complete an undelegation transaction and claim rewards
+            
+            </b-tooltip>
+          </dt>
            
-          <dl
-            class="info_dl"
+          <dd
+            id="unbonding_time"
           >
-            <dt>
-              Current Staking Token
-            </dt>
-             
-            <dd
-              id="bond_denom"
-            >
-              
-              CLR
             
-            </dd>
-          </dl>
+            3 days
+          
+          </dd>
         </div>
          
         <div
-          class="column"
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl"
         >
-          <dl
-            class="info_dl"
+          <dt>
+            Current Staking Token
+          </dt>
+           
+          <dd
+            id="bond_denom"
           >
-            <dt>
-              Maximum Number of Validators
-            </dt>
-             
-            <dd
-              id="max_validators"
-            >
-              
-              100
             
-            </dd>
-          </dl>
+            CLR
+          
+          </dd>
+        </div>
+         
+        <div
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl width"
+        >
+          <dt>
+            Maximum Number of Validators
+          </dt>
+           
+          <dd
+            id="max_validators"
+          >
+            
+            100
+          
+          </dd>
         </div>
       </div>
     </div>
@@ -176,68 +180,70 @@ exports[`TabStakingParameters has the expected html structure 1`] = `
         class="row"
       >
         <div
-          class="column"
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl"
         >
-          <dl
-            class="info_dl"
-          >
-            <dt>
-              
-              Duration of Undelegation Period
-              
-              <i
-                class="material-icons info-button"
-              >
-                
-                info_outline
-              
-              </i>
-            </dt>
-             
-            <dd
-              id="unbonding_time"
+          <dt>
+            
+            Duration of Undelegation Period
+            
+            <i
+              class="material-icons info-button"
+              id="tooltip-target-4"
             >
               
-              3 days
+              info_outline
             
-            </dd>
-          </dl>
+            </i>
+             
+            <b-tooltip
+              target="tooltip-target-4"
+              triggers="hover"
+            >
+              
+              Time to complete an undelegation transaction and claim rewards
+            
+            </b-tooltip>
+          </dt>
            
-          <dl
-            class="info_dl"
+          <dd
+            id="unbonding_time"
           >
-            <dt>
-              Current Staking Token
-            </dt>
-             
-            <dd
-              id="bond_denom"
-            >
-              
-              CLR
             
-            </dd>
-          </dl>
+            3 days
+          
+          </dd>
         </div>
          
         <div
-          class="column"
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl"
         >
-          <dl
-            class="info_dl"
+          <dt>
+            Current Staking Token
+          </dt>
+           
+          <dd
+            id="bond_denom"
           >
-            <dt>
-              Maximum Number of Validators
-            </dt>
-             
-            <dd
-              id="max_validators"
-            >
-              
-              100
             
-            </dd>
-          </dl>
+            CLR
+          
+          </dd>
+        </div>
+         
+        <div
+          class="col-lg-4 col-md-4 col-sm-4 col-xs-12 info_dl width"
+        >
+          <dt>
+            Maximum Number of Validators
+          </dt>
+           
+          <dd
+            id="max_validators"
+          >
+            
+            100
+          
+          </dd>
         </div>
       </div>
     </div>

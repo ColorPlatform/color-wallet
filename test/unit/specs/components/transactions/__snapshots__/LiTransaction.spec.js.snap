@@ -5,42 +5,73 @@ exports[`LiTransaction should show a network fee 1`] = `
   class="li-tx"
 >
   <div
-    class="li-tx__icon"
-  >
-    <img
-      src="~assets/images/color.svg"
-      style="border-color: #ffffff;"
-    />
-  </div>
-   
-  <div
     class="li-tx__content"
   >
     <div
       class="li-tx__content__left"
     >
       <div
-        class="li-tx__content__caption"
+        class="li-tx__icon"
       >
-        <p
-          class="li-tx__content__caption__title"
-        >
-          <span>
-            Some Caption
-          </span>
-        </p>
+        <img
+          rel="preload"
+          src="~assets/images/color.svg"
+          style="border-color: #ffffff;"
+        />
       </div>
        
       <div
-        class="li-tx__content__information"
+        class="li-tx-desc"
       >
-        <span>
-          Some Details
-        </span>
+        <div
+          class="li-tx__content__caption"
+        >
+          <p
+            class="li-tx__content__caption__title alignment-res"
+          >
+            <span>
+              Some Caption
+            </span>
+          </p>
+        </div>
          
-        <span>
-            - TESTING (Sent via Color Wallet) 
-        </span>
+        <div
+          class="li-tx__content__information"
+        >
+          <span>
+            Some Details
+          </span>
+           
+          <!---->
+        </div>
+         
+        <div
+          class="tx-hash"
+        >
+          
+        Tx Hash # 
+        
+          <div
+            class="address"
+            id="address"
+          >
+            
+          </div>
+           
+          <div
+            class="copied"
+          >
+            <i
+              class="material-icons"
+            >
+              check
+            </i>
+             
+            <span>
+              Copied
+            </span>
+          </div>
+        </div>
       </div>
     </div>
      
@@ -49,7 +80,8 @@ exports[`LiTransaction should show a network fee 1`] = `
     >
       <div>
         
-        Network Fee: 
+        Network Fee: 
+        
         <b>
           0.003421
         </b>
@@ -65,10 +97,15 @@ exports[`LiTransaction should show a network fee 1`] = `
         <router-link-stub
           to="[object Object]"
         >
-          
-          Block #500  
+          Block #500 
         </router-link-stub>
-        @ 00:00:42
+      </div>
+       
+      <div
+        class="li-tx__content__block"
+      >
+        
+       Jan 1st 1970, 00:00:42am UTC
       
       </div>
     </div>
@@ -81,118 +118,73 @@ exports[`LiTransaction should show a network fee of 0 1`] = `
   class="li-tx"
 >
   <div
-    class="li-tx__icon"
-  >
-    <img
-      src="~assets/images/color.svg"
-      style="border-color: #ffffff;"
-    />
-  </div>
-   
-  <div
     class="li-tx__content"
   >
     <div
       class="li-tx__content__left"
     >
       <div
-        class="li-tx__content__caption"
+        class="li-tx__icon"
       >
-        <p
-          class="li-tx__content__caption__title"
+        <img
+          rel="preload"
+          src="~assets/images/color.svg"
+          style="border-color: #ffffff;"
+        />
+      </div>
+       
+      <div
+        class="li-tx-desc"
+      >
+        <div
+          class="li-tx__content__caption"
+        >
+          <p
+            class="li-tx__content__caption__title alignment-res"
+          >
+            <span>
+              Some Caption
+            </span>
+          </p>
+        </div>
+         
+        <div
+          class="li-tx__content__information"
         >
           <span>
-            Some Caption
+            Some Details
           </span>
-        </p>
-      </div>
-       
-      <div
-        class="li-tx__content__information"
-      >
-        <span>
-          Some Details
-        </span>
+           
+          <!---->
+        </div>
          
-        <span>
-            - TESTING (Sent via Color Wallet) 
-        </span>
-      </div>
-    </div>
-     
-    <div
-      class="li-tx__content__right"
-    >
-      <div>
-        
-        Network Fee: 
-        <b>
-          0
-        </b>
-         
-        <span>
-          CLR
-        </span>
-      </div>
-       
-      <div
-        class="li-tx__content__block"
-      >
-        <router-link-stub
-          to="[object Object]"
+        <div
+          class="tx-hash"
         >
           
-          Block #500  
-        </router-link-stub>
-        @ 00:00:42
-      
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`LiTransaction should show a transaction item 1`] = `
-<div
-  class="li-tx"
->
-  <div
-    class="li-tx__icon"
-  >
-    <img
-      src="~assets/images/color.svg"
-      style="border-color: #ffffff;"
-    />
-  </div>
-   
-  <div
-    class="li-tx__content"
-  >
-    <div
-      class="li-tx__content__left"
-    >
-      <div
-        class="li-tx__content__caption"
-      >
-        <p
-          class="li-tx__content__caption__title"
-        >
-          <span>
-            Some Caption
-          </span>
-        </p>
-      </div>
-       
-      <div
-        class="li-tx__content__information"
-      >
-        <span>
-          Some Details
-        </span>
-         
-        <span>
-            - TESTING (Sent via Color Wallet) 
-        </span>
+        Tx Hash # 
+        
+          <div
+            class="address"
+            id="address"
+          >
+            
+          </div>
+           
+          <div
+            class="copied"
+          >
+            <i
+              class="material-icons"
+            >
+              check
+            </i>
+             
+            <span>
+              Copied
+            </span>
+          </div>
+        </div>
       </div>
     </div>
      
@@ -201,7 +193,8 @@ exports[`LiTransaction should show a transaction item 1`] = `
     >
       <div>
         
-        Network Fee: 
+        Network Fee: 
+        
         <b>
           0.003421
         </b>
@@ -217,10 +210,128 @@ exports[`LiTransaction should show a transaction item 1`] = `
         <router-link-stub
           to="[object Object]"
         >
-          
-          Block #500  
+          Block #500 
         </router-link-stub>
-        @ 00:00:42
+      </div>
+       
+      <div
+        class="li-tx__content__block"
+      >
+        
+       Jan 1st 1970, 00:00:42am UTC
+      
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LiTransaction should show a transaction item 1`] = `
+<div
+  class="li-tx"
+>
+  <div
+    class="li-tx__content"
+  >
+    <div
+      class="li-tx__content__left"
+    >
+      <div
+        class="li-tx__icon"
+      >
+        <img
+          rel="preload"
+          src="~assets/images/color.svg"
+          style="border-color: #ffffff;"
+        />
+      </div>
+       
+      <div
+        class="li-tx-desc"
+      >
+        <div
+          class="li-tx__content__caption"
+        >
+          <p
+            class="li-tx__content__caption__title alignment-res"
+          >
+            <span>
+              Some Caption
+            </span>
+          </p>
+        </div>
+         
+        <div
+          class="li-tx__content__information"
+        >
+          <span>
+            Some Details
+          </span>
+           
+          <!---->
+        </div>
+         
+        <div
+          class="tx-hash"
+        >
+          
+        Tx Hash # 
+        
+          <div
+            class="address"
+            id="address"
+          >
+            
+          </div>
+           
+          <div
+            class="copied"
+          >
+            <i
+              class="material-icons"
+            >
+              check
+            </i>
+             
+            <span>
+              Copied
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="li-tx__content__right"
+    >
+      <div>
+        
+        Network Fee: 
+        
+        <b>
+          0.003421
+        </b>
+         
+        <span>
+          CLR
+        </span>
+      </div>
+       
+      <div
+        class="li-tx__content__block"
+      >
+        <router-link-stub
+          to="[object Object]"
+        >
+          Block #500 
+        </router-link-stub>
+      </div>
+       
+      <div
+        class="li-tx__content__block"
+      >
+        
+       Jan 1st 1970, 00:00:42am UTC
       
       </div>
     </div>

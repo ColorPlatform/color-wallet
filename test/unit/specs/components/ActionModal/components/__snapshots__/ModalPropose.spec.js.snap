@@ -2,10 +2,10 @@
 
 exports[`ModalPropose should display proposal modal form 1`] = `
 <actionmodal-stub
-  amount="0"
+  amount="10000"
   id="modal-propose"
   notifymessage="[object Object]"
-  submissionerrorprefix="Submitting proposal failed"
+  submissionerrorprefix="Transaction failed"
   title="Proposal"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -47,6 +47,40 @@ exports[`ModalPropose should display proposal modal form 1`] = `
    
   <tmformgroup-stub
     class="action-modal-form-group"
+    fieldid="requestedfund"
+    fieldlabel="Requested Fund"
+  >
+    <span
+      class="input-suffix"
+    >
+      CLR
+    </span>
+     
+    <tmfield-stub
+      id="requestedfund"
+      type="number"
+      value="0"
+    />
+     
+    <!---->
+  </tmformgroup-stub>
+   
+  <tmformgroup-stub
+    class="action-modal-form-group"
+    fieldid="fundcycle"
+    fieldlabel="Funding Cycle"
+  >
+    <tmfield-stub
+      id="fundcycle"
+      type="number"
+      value="0"
+    />
+     
+    <!---->
+  </tmformgroup-stub>
+   
+  <tmformgroup-stub
+    class="action-modal-form-group"
     fieldid="amount"
     fieldlabel="Deposit"
   >
@@ -58,8 +92,9 @@ exports[`ModalPropose should display proposal modal form 1`] = `
      
     <tmfield-stub
       id="amount"
+      readonly=""
       type="number"
-      value="0"
+      value="10000"
     />
      
     <!---->

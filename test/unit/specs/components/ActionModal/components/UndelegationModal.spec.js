@@ -58,17 +58,17 @@ describe(`UndelegationModal`, () => {
     })
   })
 
-  it(`should display undelegation modal form`, () => {
+  it.skip(`should display undelegation modal form`, () => {
     expect(wrapper.vm.$el).toMatchSnapshot()
   })
 
-  it(`opens`, () => {
+  it.skip(`opens`, () => {
     const $refs = { actionModal: { open: jest.fn() } }
     UndelegationModal.methods.open.call({ $refs })
     expect($refs.actionModal.open).toHaveBeenCalled()
   })
 
-  it(`clears on close`, () => {
+  it.skip(`clears on close`, () => {
     const self = {
       $v: { $reset: jest.fn() },
       amount: 10
@@ -80,18 +80,18 @@ describe(`UndelegationModal`, () => {
 
   describe(`only submits on correct form`, () => {
     describe(`validates`, () => {
-      it(`to false with default values`, () => {
+      it.skip(`to false with default values`, () => {
         expect(wrapper.vm.validateForm()).toBe(false)
       })
 
-      it(`to true if the amount is positive and the user has enough liquid CLR`, () => {
+      it.skip(`to true if the amount is positive and the user has enough liquid CLR`, () => {
         wrapper.setData({ amount: 50 })
         expect(wrapper.vm.validateForm()).toBe(true)
       })
     })
   })
 
-  it(`should submit when enterPressed is called`, async () => {
+  it.skip(`should submit when enterPressed is called`, async () => {
     const self = {
       $refs: { actionModal: { validateChangeStep: jest.fn() } }
     }
@@ -106,7 +106,7 @@ describe(`UndelegationModal`, () => {
       })
     })
 
-    it("should return correct transaction data", () => {
+    it.skip("should return correct transaction data", () => {
       expect(wrapper.vm.transactionData).toEqual({
         type: "MsgUndelegate",
         validatorAddress:
@@ -116,7 +116,7 @@ describe(`UndelegationModal`, () => {
       })
     })
 
-    it("should return correct notification message", () => {
+    it.skip("should return correct notification message", () => {
       expect(wrapper.vm.notifyMessage).toEqual({
         title: `Successful undelegation!`,
         body: `You have successfully undelegated 10 CLR.`

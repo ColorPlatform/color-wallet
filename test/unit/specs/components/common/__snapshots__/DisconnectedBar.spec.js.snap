@@ -13,7 +13,7 @@ exports[`DisconnectedBar shows the disconnected bar 1`] = `
     <a
       class="link"
     >
-      Try Reconnecting
+      Try Reconnecting 
     </a>
     ?
   

@@ -43,7 +43,9 @@ exports[`ActionModal should show the action modal on success 1`] = `
         
       </div>
        
-      <div>
+      <div
+        class="addressbreak"
+      >
         
           You have successfully completed a transaction. 
         <br />
@@ -152,6 +154,14 @@ exports[`ActionModal should show the action modal when user has logged in with e
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <tableinvoice-stub
@@ -171,7 +181,6 @@ exports[`ActionModal should show the action modal when user has logged in with e
     >
       <div>
         <tmbtn-stub
-          color="primary"
           value="Next"
         />
       </div>
@@ -219,6 +228,14 @@ exports[`ActionModal should show the action modal when user has logged in with e
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <tmformgroup-stub
       class="action-modal-form-group"
       fieldid="sign-method"
@@ -259,8 +276,6 @@ exports[`ActionModal should show the action modal when user has logged in with e
     >
       <div>
         <tmbtn-stub
-          color="primary"
-          disabled="true"
           value="Send"
         />
       </div>
@@ -308,6 +323,14 @@ exports[`ActionModal should show the action modal when user has logged in with e
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <tmformgroup-stub
       class="action-modal-form-group"
       fieldid="sign-method"
@@ -348,7 +371,6 @@ exports[`ActionModal should show the action modal when user has logged in with e
     >
       <div>
         <tmbtn-stub
-          color="primary"
           disabled="true"
           value="Sending..."
         />
@@ -397,6 +419,14 @@ exports[`ActionModal should show the action modal when user has logged in with e
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <tableinvoice-stub
@@ -416,7 +446,6 @@ exports[`ActionModal should show the action modal when user has logged in with e
     >
       <div>
         <tmbtn-stub
-          color="primary"
           value="Next"
         />
       </div>
@@ -464,6 +493,14 @@ exports[`ActionModal should show the action modal when user has logged in with e
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <!---->
@@ -492,8 +529,6 @@ exports[`ActionModal should show the action modal when user has logged in with e
     >
       <div>
         <tmbtn-stub
-          color="primary"
-          disabled="true"
           value="Send"
         />
       </div>
@@ -541,6 +576,14 @@ exports[`ActionModal should show the action modal when user has logged in with e
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <!---->
@@ -570,7 +613,6 @@ exports[`ActionModal should show the action modal when user has logged in with e
     >
       <div>
         <tmbtn-stub
-          color="primary"
           disabled="true"
           value="Waiting for Extension"
         />
@@ -619,6 +661,14 @@ exports[`ActionModal should show the action modal when user has logged in with l
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <tableinvoice-stub
@@ -638,7 +688,6 @@ exports[`ActionModal should show the action modal when user has logged in with l
     >
       <div>
         <tmbtn-stub
-          color="primary"
           value="Next"
         />
       </div>
@@ -686,6 +735,14 @@ exports[`ActionModal should show the action modal when user has logged in with l
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <hardwarestate-stub
@@ -710,8 +767,6 @@ exports[`ActionModal should show the action modal when user has logged in with l
     >
       <div>
         <tmbtn-stub
-          color="primary"
-          disabled="true"
           value="Send"
         />
       </div>
@@ -759,6 +814,14 @@ exports[`ActionModal should show the action modal when user has logged in with l
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <hardwarestate-stub
@@ -784,7 +847,6 @@ exports[`ActionModal should show the action modal when user has logged in with l
     >
       <div>
         <tmbtn-stub
-          color="primary"
           disabled="true"
           value="Waiting for Ledger"
         />
@@ -833,6 +895,14 @@ exports[`ActionModal should show the action modal when user has logged in with l
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <tableinvoice-stub
@@ -852,7 +922,6 @@ exports[`ActionModal should show the action modal when user has logged in with l
     >
       <div>
         <tmbtn-stub
-          color="primary"
           value="Next"
         />
       </div>
@@ -900,6 +969,14 @@ exports[`ActionModal should show the action modal when user has logged in with l
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <!---->
@@ -929,8 +1006,6 @@ exports[`ActionModal should show the action modal when user has logged in with l
     >
       <div>
         <tmbtn-stub
-          color="primary"
-          disabled="true"
           value="Send"
         />
       </div>
@@ -978,6 +1053,14 @@ exports[`ActionModal should show the action modal when user has logged in with l
   <div
     class="action-modal-form"
   >
+    <a>
+      <i
+        class="material-icons session-back"
+      >
+        arrow_back
+      </i>
+    </a>
+     
     <!---->
      
     <!---->
@@ -1007,7 +1090,6 @@ exports[`ActionModal should show the action modal when user has logged in with l
     >
       <div>
         <tmbtn-stub
-          color="primary"
           disabled="true"
           value="Sending..."
         />
@@ -1073,7 +1155,6 @@ exports[`ActionModal should show the action modal when user hasn't logged in 1`]
     >
       <div>
         <tmbtn-stub
-          color="primary"
           value="Sign In"
         />
       </div>

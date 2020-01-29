@@ -102,7 +102,7 @@ describe(`ActionModal`, () => {
   it(`should set the submissionError if the submission is rejected`, async () => {
     const ActionManagerSend = jest
       .fn()
-      .mockRejectedValue(new Error(`some kind of error message`))
+      .mockRejectedValue(new Error(`PREFIX: some kind of error message`))
     const $store = { dispatch: jest.fn() }
     const self = {
       $store,
@@ -123,10 +123,10 @@ describe(`ActionModal`, () => {
     }
     await ActionModal.methods.submit.call(self)
     expect(self.onSendingFailed).toHaveBeenCalledWith(
-      "some kind of error message"
+      "PREFIX: some kind of error message"
     )
 
-    ActionModal.methods.onSendingFailed.call(self, "some kind of error message")
+    ActionModal.methods.onSendingFailed.call(self, "PREFIX: some kind of error message")
     expect(self.submissionError).toEqual(`PREFIX: some kind of error message.`)
   })
 
@@ -478,7 +478,11 @@ describe(`ActionModal`, () => {
       wrapper.vm.submit()
       await wrapper.vm.$nextTick()
 
-      expect(wrapper.html()).toContain("Transaction failed: invalid request.")
+      expect(wrapper.html()).toContain(`<div tabindex=\"0\" class=\"action-modal\" name=\"slide-fade\"><div id=\"closeBtn\" class=\"action-modal-icon action-modal-close\"><i class=\"material-icons\">close</i></div> <div class=\"action-modal-header\"><span class=\"action-modal-title\">
+        Action Modal
+      </span> <steps-stub steps=\"Details,Fees,Sign\" activestep=\"sign\"></steps-stub></div> <div class=\"action-modal-form\"><a><i class=\"material-icons session-back\">arrow_back</i></a> <!----> <!----> <form><tmformgroup-stub fieldid=\"password\" fieldlabel=\"Password\" class=\"action-modal-group\"><tmfield-stub type=\"password\" placeholder=\"Password\" id=\"password\"></tmfield-stub> <!----></tmformgroup-stub></form></div> <div class=\"action-modal-footer\"><tmformgroup-stub class=\"action-modal-group\"><div><tmbtn-stub value=\"Send\"></tmbtn-stub></div></tmformgroup-stub> <p class=\"tm-form-msg sm tm-form-msg--error submission-error\">
+        invalid request.
+      </p></div></div>`)
       expect(wrapper.vm.step).toBe("sign")
     })
 
@@ -513,7 +517,14 @@ describe(`ActionModal`, () => {
       await wrapper.vm.$nextTick()
 
       expect(wrapper.html()).toContain(
-        "Transaction failed: couldn't find Ledger."
+        `<div tabindex=\"0\" class=\"action-modal\" name=\"slide-fade\"><div id=\"closeBtn\" class=\"action-modal-icon action-modal-close\"><i class=\"material-icons\">close</i></div> <div class=\"action-modal-header\"><span class=\"action-modal-title\">
+        Action Modal
+      </span> <steps-stub steps=\"Details,Fees,Sign\" activestep=\"sign\"></steps-stub></div> <div class=\"action-modal-form\"><a><i class=\"material-icons session-back\">arrow_back</i></a> <!----> <hardwarestate-stub icon=\"info\"><div>
+          Please use Chrome, Brave, or Opera. Ledger is not supported in this
+          browser.
+        </div></hardwarestate-stub> <!----></div> <div class=\"action-modal-footer\"><tmformgroup-stub class=\"action-modal-group\"><div><tmbtn-stub value=\"Send\"></tmbtn-stub></div></tmformgroup-stub> <p class=\"tm-form-msg sm tm-form-msg--error submission-error\">
+        couldn't find Ledger.
+      </p></div></div>`
       )
       expect(wrapper.vm.step).toBe("sign")
     })

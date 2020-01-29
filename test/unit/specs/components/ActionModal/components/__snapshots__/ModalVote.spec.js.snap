@@ -6,7 +6,7 @@ exports[`ModalVote should display vote modal form 1`] = `
   class="modal-vote"
   id="modal-vote"
   notifymessage="[object Object]"
-  submissionerrorprefix="Voting failed"
+  submissionerrorprefix="Transaction failed"
   title="Vote"
   transactiondata="[object Object]"
   validate="function () { [native code] }"
@@ -33,20 +33,19 @@ exports[`ModalVote should display vote modal form 1`] = `
     <tmbtn-stub
       class=""
       color="secondary"
-      id="vote-veto"
-      size="md"
-      value="No With Veto"
-    />
-     
-    <tmbtn-stub
-      class=""
-      color="secondary"
       id="vote-abstain"
       size="md"
       value="Abstain"
     />
      
     <!---->
+     
+    <tmformmsg-stub
+      class="margintop"
+      msg="You can't vote, Delegated CLR must be greater than or equal to 50,000 CLR"
+      name=""
+      type="custom"
+    />
   </tmformgroup-stub>
 </actionmodal-stub>
 `;

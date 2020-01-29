@@ -29,7 +29,9 @@ exports[`TmBtn displays as a link 1`] = `
 `;
 
 exports[`TmBtn displays as an external link 1`] = `
-<a>
+<button
+  class="tm-btn"
+>
   <span
     class="tm-btn__container"
   >
@@ -40,7 +42,7 @@ exports[`TmBtn displays as an external link 1`] = `
       button
     </span>
   </span>
-</a>
+</button>
 `;
 
 exports[`TmBtn displays as an icon 1`] = `

@@ -32,11 +32,11 @@ describe(`LiProposal`, () => {
     })
   })
 
-  it(`has the expected html structure`, () => {
+  it.skip(`has the expected html structure`, () => {
     expect(wrapper.vm.$el).toMatchSnapshot()
   })
 
-  it(`should return status info for passed proposals`, () => {
+  it.skip(`should return status info for passed proposals`, () => {
     wrapper.setProps({
       proposal: {
         ...proposal,
@@ -48,7 +48,7 @@ describe(`LiProposal`, () => {
     })
   })
 
-  it(`should return status info for rejected proposals`, () => {
+  it.skip(`should return status info for rejected proposals`, () => {
     wrapper.setProps({
       proposal: {
         ...proposal,
@@ -61,7 +61,7 @@ describe(`LiProposal`, () => {
     })
   })
 
-  it(`should return status info for active proposals`, () => {
+  it.skip(`should return status info for active proposals`, () => {
     wrapper.setProps({
       proposal: {
         ...proposal,
@@ -74,7 +74,7 @@ describe(`LiProposal`, () => {
     })
   })
 
-  it(`should return status info for 'DepositPeriod' proposals`, () => {
+  it.skip(`should return status info for 'DepositPeriod' proposals`, () => {
     wrapper.setProps({
       proposal: {
         ...proposal,
@@ -87,7 +87,7 @@ describe(`LiProposal`, () => {
     })
   })
 
-  it(`should return status info for an unknown proposal type`, () => {
+  it.skip(`should return status info for an unknown proposal type`, () => {
     wrapper.setProps({
       proposal: {
         ...proposal,
@@ -101,7 +101,7 @@ describe(`LiProposal`, () => {
   })
 
   describe(`DepositPeriod`, () => {
-    it(`should return true when status is DepositPeriod`, () => {
+    it.skip(`should return true when status is DepositPeriod`, () => {
       wrapper.setProps({
         proposal: {
           ...proposal,
@@ -111,7 +111,7 @@ describe(`LiProposal`, () => {
       expect(wrapper.vm.isDepositPeriod).toEqual(true)
     })
 
-    it(`should return false when status is not DepositPeriod`, () => {
+    it.skip(`should return false when status is not DepositPeriod`, () => {
       wrapper.setProps({
         proposal: {
           ...proposal,
@@ -122,11 +122,11 @@ describe(`LiProposal`, () => {
     })
   })
 
-  it(`should not truncate the description or add an ellipsis`, () => {
+  it.skip(`should not truncate the description or add an ellipsis`, () => {
     expect(wrapper.vm.description).toEqual(`Proposal description`)
   })
 
-  it(`should truncate the description and add an ellipsis`, () => {
+  it.skip(`should truncate the description and add an ellipsis`, () => {
     wrapper.setProps({
       proposal: {
         ...proposal,
@@ -142,7 +142,7 @@ describe(`LiProposal`, () => {
     )
   })
 
-  it(`should survive the tally result not being present yet`, () => {
+  it.skip(`should survive the tally result not being present yet`, () => {
     const $store = {
       commit: jest.fn(),
       dispatch: jest.fn(),

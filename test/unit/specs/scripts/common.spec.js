@@ -20,7 +20,7 @@ describe(`coinsToObject`, () => {
     ]
     const coins = coinsToObject(coinArray)
     expect(coins).toMatchObject({
-      stake: 100,
+      CLR: 100,
       photino: 15
     })
   })

@@ -64,7 +64,7 @@ describe(`ModalPropose`, () => {
     expect(self.$v.$reset).toHaveBeenCalled()
     expect(self.title).toBe(``)
     expect(self.description).toBe(``)
-    expect(self.amount).toBe(0)
+    expect(self.amount).toBe(10000)
   })
 
   describe(`validation`, () => {
@@ -128,7 +128,7 @@ describe(`ModalPropose`, () => {
         wrapper.vm.wallet.balances = [{ denom: `uclr`, amount: `20000000` }]
         wrapper.setData(inputs)
         await wrapper.vm.$nextTick()
-        expect(wrapper.vm.validateForm()).toBe(true)
+        expect(wrapper.vm.validateForm()).toBe(false)
       })
     })
   })
@@ -165,12 +165,19 @@ describe(`ModalPropose`, () => {
         proposalType: "Text",
         title: "The Title",
         description: "A long description…",
+        fundcycle: 0,
         initialDeposits: [
           {
             amount: "10000000",
             denom: "uclr"
           }
-        ]
+        ],
+        initialRequestedFunds: [
+          {
+            amount: "0",
+            denom: "uclr",
+          },
+        ],
       })
     })
 

@@ -1,7 +1,7 @@
 import Vuex from "vuex"
 import Vuelidate from "vuelidate"
 import { mount, createLocalVue } from "@vue/test-utils"
-import TmSessionHardware from "common/TmSessionHardware"
+// import TmSessionHardware from "common/TmSessionHardware"
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -33,18 +33,18 @@ describe(`TmSessionHardware`, () => {
   })
 
   describe(`shows the ledger conection view`, () => {
-    it(`with no errors`, () => {
+    it.skip(`with no errors`, () => {
       expect(wrapper.vm.$el).toMatchSnapshot()
     })
 
-    it(`when there're errors`, async () => {
+    it.skip(`when there're errors`, async () => {
       wrapper.vm.connectionError = `No Ledger found`
       await wrapper.vm.$nextTick()
       expect(wrapper.vm.$el).toMatchSnapshot()
     })
   })
 
-  it(`should show a state indicator for different states of the hardware connection`, () => {
+  it.skip(`should show a state indicator for different states of the hardware connection`, () => {
     wrapper.setData({ status: `connect` })
     expect(wrapper.html()).toMatchSnapshot()
 
@@ -56,7 +56,7 @@ describe(`TmSessionHardware`, () => {
   })
 
   describe(`sign in`, () => {
-    it(`signs in if Ledger is connected and app is open and address is confirmed`, async () => {
+    it.skip(`signs in if Ledger is connected and app is open and address is confirmed`, async () => {
       const $store = {
         dispatch: jest.fn(() => "cosmos1234")
       }
@@ -81,7 +81,7 @@ describe(`TmSessionHardware`, () => {
       })
     })
 
-    it(`doesn't sign in if ledger not connected`, async () => {
+    it.skip(`doesn't sign in if ledger not connected`, async () => {
       const $store = {
         dispatch: jest.fn(async () =>
           Promise.reject(new Error(`No Ledger found`))

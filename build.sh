@@ -5,7 +5,7 @@ if [ "$1" = "staging" ]
 then
   echo Building wallet with staging Enviorment
 
- QRCODE=https://wallet.testnet.color-platform.rnssol.com FAUCET=https://proxy.testnet.color-platform.rnssol.com:8000/claim/wallet SHORTURL=https://s.testnet.color-platform.rnssol.com/encode/ CHAIN=colors-test-01 STARGATE=https://proxy.testnet.color-platform.rnssol.com:9071 RPC=https://rpc.testnet.color-platform.rnssol.com yarn build
+ QRCODE=https://wallet.testnet.color-platform.rnssol.com FAUCET=https://proxy.testnet.color-platform.rnssol.com:8000/claim/wallet SHORTURL=https://s.testnet.color-platform.rnssol.com/encode/ CHAIN=local-testnet STARGATE=https://proxy.testnet.color-platform.rnssol.com:9071 RPC=https://rpc.testnet.color-platform.rnssol.com yarn build
 
 elif [ "$1" = "production" ]
 then
@@ -17,7 +17,7 @@ else
 fi
 
 #npm install
-#STARGATE=https://proxy.testnet.color-platform.rnssol.com:9071 RPC=https://rpc.testnet.color-platform.rnssol.com yarn build
+#STARGATE=https://proxy.mainbeta-2.color-platform.rnssol.com:9071 RPC=https://rpc.mainbeta-2.color-platform.rnssol.com yarn build
 #yarn serve:dist
 
 

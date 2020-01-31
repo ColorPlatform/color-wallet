@@ -216,7 +216,7 @@ if (process.env.NODE_ENV === `production`) {
         "object-src": `'none'`,
         "base-uri": `'self'`,
         "default-src": `'self'`,
-        "script-src": [`'self'`, `https://app.appzi.io/`, `https://*.lunie.io`],
+        "script-src": [`'self'`, `https://app.appzi.io/`, `https://*.color-platform.org`],
         "worker-src": `'none'`,
         // 'style-src': production ? `'self'` : `*`, // SECURITY Appzi is applying styles inline, inquired to them already
         "style-src": [`'self'`, `'unsafe-inline'`],
@@ -226,13 +226,13 @@ if (process.env.NODE_ENV === `production`) {
           `https://appzi-collector-b.azurewebsites.net`,
           `https://keybase.io`,
           // mainnet
-          `https://stargate.lunie.io`,
-          `wss://rpc.lunie.io:26657`,
-          `https://stargate.cosmos.network`,
-          `wss://rpc.cosmos.network:26657`,
+          `https://proxy.mainbeta-2.color-platform.org:9061`,
+          `wss://rpc.mainbeta-2.color-platform.org`,
+          // `https://stargate.cosmos.network`,
+          // `wss://rpc.cosmos.network:26657`,
           // testnet
-          `https://sntajlxzsg.execute-api.eu-central-1.amazonaws.com/`,
-          `wss://test.voyager.ninja:26657`
+          // `https://sntajlxzsg.execute-api.eu-central-1.amazonaws.com/`,
+          // `wss://test.voyager.ninja:26657`
         ],
         "frame-src": [`'self'`, `https://app.appzi.io/`],
         "img-src": [

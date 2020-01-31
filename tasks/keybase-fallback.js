@@ -40,13 +40,13 @@ function getKeybaseProfileFromResponse(keybaseId, { data }) {
 
 function getValidators() {
   return Promise.all([
-    axios(`https://stargate.lunie.io/staking/validators?status=unbonding`).then(
+    axios(`https://proxy.mainbeta-2.color-platform.org:9061/staking/validators?status=unbonding`).then(
       res => res.data
     ),
-    axios(`https://stargate.lunie.io/staking/validators?status=bonded`).then(
+    axios(`https://proxy.mainbeta-2.color-platform.org:9061/staking/validators?status=bonded`).then(
       res => res.data
     ),
-    axios(`https://stargate.lunie.io/staking/validators?status=unbonded`).then(
+    axios(`https://proxy.mainbeta-2.color-platform.org:9061/staking/validators?status=unbonded`).then(
       res => res.data
     )
   ]).then(validatorGroups => [].concat(...validatorGroups))

@@ -117,9 +117,9 @@ jobs:
           yarn build:keybase-cache
           if [ "${CIRCLE_BRANCH}" = "master" ]; then
             yarn build:ui --output-path $DIST_TESTNET
-            RELEASE=true STARGATE=https://stargate.lunie.io RPC=https://rpc.lunie.io:26657 CIRCLECI=true yarn build:ui
+            RELEASE=true STARGATE=https://proxy.mainbeta-2.color-platform.org:9061 RPC=https://rpc.mainbeta-2.color-platform.org/ CIRCLECI=true yarn build:ui
           else
-            STARGATE=https://stargate.lunie.io RPC=https://rpc.lunie.io:26657 CIRCLECI=true yarn build:ui
+            STARGATE=https://proxy.mainbeta-2.color-platform.org:9061 RPC=https://rpc.mainbeta-2.color-platform.org/ CIRCLECI=true yarn build:ui
           fi
       - persist_to_workspace:
           root: *WORKSPACE

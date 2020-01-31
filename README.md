@@ -44,7 +44,7 @@ Color Wallet supports sending transactions through the `Color` app for [Ledger N
 With Node, Yarn and Docker installed, you're ready to check out the source code:
 
 ```bash
-git clone https://github.com/RNSSolution/color-wallet.git
+git clone https://github.com/ColorPlatform/color-wallet.git
 cd color-wallet
 yarn install
 ```
@@ -66,7 +66,7 @@ yarn certificates
 You can simply start a docker based testnet and the frontend.
 
 ```bash
-yarn start
+yarn startlocal
 ```
 
 This will create a rich account. You need to import that account into Color Wallet:

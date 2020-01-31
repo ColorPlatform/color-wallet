@@ -1,9 +1,9 @@
-import Ledger from "@rnssolution/color-ledger"
+import Ledger from "@colorplatform/color-ledger"
 import {
   signWithPrivateKey,
   getStoredWallet,
   signWithPrivateKeywallet
-} from "@rnssolution/color-keys"
+} from "@colorplatform/color-keys"
 import { signWithExtension } from "src/scripts/extension-utils"
 
 export function getSigner(config, submitType = "", { address, password }) {

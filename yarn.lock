@@ -634,6 +634,38 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@colorplatform/color-api@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@colorplatform/color-api/-/color-api-2.2.0.tgz#2a92f14a3d62091ea6404dbabc3b0a9a855d535c"
+  integrity sha512-TXE3olT0K4YN1hWptnf7b2qhdQ7DWXrDk+iJB2vF8GznEW0z2mfKvX1ygteVFodb6s4mI2iBdz6WF3+QjQ0rDw==
+  dependencies:
+    "@babel/runtime" "^7.5.4"
+    axios "^0.19.0"
+
+"@colorplatform/color-keys@2.0.3", "@colorplatform/color-keys@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@colorplatform/color-keys/-/color-keys-2.0.3.tgz#55ae080c9c67b809ea2d8fef48e247cb457a05c5"
+  integrity sha512-NpohKETKf/eB7p8qt7JJWLvxmooUvIa+IvYWc64CbtvfpNBMyGoTZzctWYppcp+0CKNJjeuWjNPweA9BcLkotQ==
+  dependencies:
+    bech32 "^1.1.3"
+    bip32 "^1.0.4"
+    bip39 "^3.0.1"
+    crypto-js "^3.1.9-1"
+    secp256k1 "^3.6.2"
+    varuint-bitcoin "^1.1.2"
+
+"@colorplatform/color-ledger@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@colorplatform/color-ledger/-/color-ledger-0.1.0.tgz#53ec5d9b04327c6960c7ffbe4e91f89cf3f407cf"
+  integrity sha512-Z5HYVO4E6qoZMd49uDkiOAC1AmuyONlduimn/xQ9rLp4r0T8/TbdGHQPmdi+nYaLQCSSAmudAA6dUQPs5CiSOQ==
+  dependencies:
+    "@colorplatform/color-keys" "^2.0.3"
+    "@ledgerhq/hw-transport-u2f" "^4.61.0"
+    "@ledgerhq/hw-transport-webusb" "^4.61.0"
+    ledger-cosmos-js "^2.0.2"
+    secp256k1 "^3.7.0"
+    semver "^6.1.0"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -872,49 +904,6 @@
     once "^1.4.0"
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
-
-"@rnssolution/color-api@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@rnssolution/color-api/-/color-api-2.1.0.tgz#360343441564b035b3fe0be2333180211083e44d"
-  integrity sha512-MLF34sUv535uNERUQUEf/1w0x9hQ9Op9xTtxoE1idmmVzF4hfJ/TDt1nNSQvQ2t+0cVWzoXIiiEvV91jYUei+w==
-  dependencies:
-    "@babel/runtime" "^7.5.4"
-    axios "^0.19.0"
-
-"@rnssolution/color-keys@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@rnssolution/color-keys/-/color-keys-2.0.2.tgz#51295ee4b56ff02430ed8389fa13c2575fb29942"
-  integrity sha512-GWdVqL8dRKh8DwtFT1EQF7hYRcTPOao/PFOKv0J54R0AO3EYioZ0Emju8jOFKB7ilZOM+JQsbtBZXeD3a1Aw5g==
-  dependencies:
-    bech32 "^1.1.3"
-    bip32 "^1.0.4"
-    bip39 "^3.0.1"
-    crypto-js "^3.1.9-1"
-    secp256k1 "^3.6.2"
-    varuint-bitcoin "^1.1.2"
-
-"@rnssolution/color-keys@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@rnssolution/color-keys/-/color-keys-0.1.2.tgz#e380887e97a82951044e14171a8f61446787ea35"
-  integrity sha512-/hroXG9zdQgrJBrPeOKSsSSkvFXVTWq5/Fd7H4xtlif0Q3evUpyJafUwg38retbHSrg+hxXC8oYHJMxUPLYVUg==
-  dependencies:
-    bech32 "^1.1.3"
-    bip32 "^1.0.4"
-    bip39 "^3.0.1"
-    crypto-js "^3.1.9-1"
-    secp256k1 "^3.6.2"
-
-"@rnssolution/color-ledger@0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@rnssolution/color-ledger/-/color-ledger-0.1.2.tgz#6a858611d042729f5c5998e061396cf430a7ded9"
-  integrity sha512-MNOGQRYwoF3u4GuDC1/ZuKNaO8B3fqtCLhUQkuiAblAH48X+luiX1xVdEabR+cLu+1mj5ykf0oaSm96S/5o0zw==
-  dependencies:
-    "@ledgerhq/hw-transport-u2f" "^4.61.0"
-    "@ledgerhq/hw-transport-webusb" "^4.61.0"
-    "@rnssolution/color-keys" "^0.1.2"
-    ledger-cosmos-js "^2.0.2"
-    secp256k1 "^3.7.0"
-    semver "^6.1.0"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"

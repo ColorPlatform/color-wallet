@@ -43,7 +43,8 @@
         "default": {
             "silent": true,
             "filter": [
-                "*.spec.js"
+                "explorer.spec.js",
+                "signin.spec.js"
             ]
         }
     },

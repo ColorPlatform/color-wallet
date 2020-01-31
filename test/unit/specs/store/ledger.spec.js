@@ -1,6 +1,6 @@
 import ledgerModule from "modules/ledger.js"
 
-jest.mock("@rnssolution/color-keys", () => ({}))
+jest.mock("@colorplatform/color-keys", () => ({}))
 
 describe(`Module: Ledger`, () => {
   let module, state, actions

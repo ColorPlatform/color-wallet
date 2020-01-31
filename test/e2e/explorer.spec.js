@@ -6,7 +6,7 @@ module.exports = {
     browser.expect.element(`#app-content`).to.be.visible.before(10000)
     browser.expect
       .element(".page-profile__title")
-      .text.to.contain("testnet")
+      .text.to.contain("color-mainbeta-2")
       .before(10 * 1000)
   }
 }

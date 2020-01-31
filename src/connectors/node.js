@@ -1,6 +1,6 @@
 "use strict"
 
-import Cosmos from "@rnssolution/color-api"
+import Cosmos from "@colorplatform/color-api"
 import RpcWrapper from "./rpcWrapper.js"
 
 export default function Connector(stargateUrl) {

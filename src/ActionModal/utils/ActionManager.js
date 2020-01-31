@@ -1,4 +1,4 @@
-import Cosmos from "@rnssolution/color-api"
+import Cosmos from "@colorplatform/color-api"
 import config from "src/config"
 import { getSigner, getSignSigner } from "./signer"
 import transaction from "./transactionTypes"
@@ -7,7 +7,7 @@ import {
   signWithPrivateKeywallet,
   getStoredWallet,
   verifySignature
-} from "@rnssolution/color-keys"
+} from "@colorplatform/color-keys"
 import b32 from "scripts/b32"
 
 export default class ActionManager {

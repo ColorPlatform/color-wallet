@@ -27,7 +27,7 @@
       ></b-progress-bar>
     </b-progress>
     <div class="row textalign">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment unbonded-atoms">
         
         <h3><p class="green"></p>Liquid {{ num.viewDenom(bondDenom) }}:</h3>
         <h2 class="color">{{ unbondedAtoms | prettyLong }}</h2>

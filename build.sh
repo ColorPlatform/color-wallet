@@ -11,7 +11,7 @@ elif [ "$1" = "production" ]
 then
   echo Building wallet with production Enviorment
 
- QRCODE=https://wallet.testnet.color-platform.org FAUCET=https://proxy.testnet.color-platform.org:8010/claim/wallet SHORTURL=https://s.testnet.color-platform.org/encode/ CHAIN=color-testnet-02 STARGATE=https://proxy.testnet.color-platform.org:9061 RPC=https://rpc.testnet.color-platform.org yarn build
+ QRCODE=https://wallet.mainbeta-2.color-platform.org FAUCET=https://getcoins.mainbeta-2.color-platform.org/claim/wallet SHORTURL=https://s.mainbeta-2.color-platform.org/encode/ CHAIN=color-mainbeta-2 STARGATE=https://proxy.mainbeta-2.color-platform.org:9061 RPC=https://rpc.mainbeta-2.color-platform.org yarn build
 else 
   echo Environment not provided, e.g staging
 fi

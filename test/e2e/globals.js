@@ -2,7 +2,7 @@ const axios = require("axios")
 const chai = require("chai")
 chai.use(require("chai-string"))
 
-const HOST = "localhost"
+const HOST = "proxy.mainbeta-2.color-platform.org"
 
 module.exports = {
   // controls the timeout time for async hooks. Expects the done() callback to be invoked within this time
@@ -13,7 +13,7 @@ module.exports = {
     let apiUp = false
     while (!apiUp) {
       try {
-        await axios(`http://${HOST}:9070/node_version`)
+        await axios(`https://${HOST}:9061/node_version`)
         apiUp = true
       } catch (err) {
         await new Promise(resolve => setTimeout(resolve, 1000))

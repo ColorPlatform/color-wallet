@@ -7,7 +7,7 @@ import {
   getNewWalletFromSeed,
   testPassword,
   storeWallet
-} from "@rnssolution/color-keys"
+} from "@colorplatform/color-keys"
 
 export default () => {
   const state = {

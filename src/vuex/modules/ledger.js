@@ -1,5 +1,5 @@
 import config from "src/config"
-import Ledger from "@rnssolution/color-ledger"
+import Ledger from "@colorplatform/color-ledger"
 
 export default () => {
   const emptyState = {}

@@ -7,6 +7,7 @@
       </i>
     </a>
     <TmBtn
+      id="sign-in"
       v-if="!session.signedIn"
       class="sign-in-button"
       value="Sign In"

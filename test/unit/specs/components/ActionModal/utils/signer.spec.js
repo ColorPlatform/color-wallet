@@ -1,7 +1,7 @@
 import config from "src/config"
 import { getSigner } from "src/ActionModal/utils/signer.js"
 
-jest.mock("@rnssolution/color-keys", () => ({
+jest.mock("@colorplatform/color-keys", () => ({
   signWithPrivateKey: () => Buffer.alloc(0),
   getStoredWallet: () => ({
     privateKey: "1234",
@@ -9,7 +9,7 @@ jest.mock("@rnssolution/color-keys", () => ({
   })
 }))
 
-jest.mock(`@rnssolution/color-ledger`, () => {
+jest.mock(`@colorplatform/color-ledger`, () => {
   return jest.fn().mockImplementation(() => {
     return {
       getKey: () => () => Buffer.alloc(0),

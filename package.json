@@ -20,7 +20,7 @@
     "start": "concurrently --names frontend,proxy,testnet \"npm run frontend\" \"npm run proxy\"",
     "startlocal": "concurrently --names frontendlocal,testnet \"npm run frontendlocal\" ",
     "serve": "concurrently --names production  \"npm run production\" ",
-    "serve:dist": "live-server --https=node_modules/live-server-https --port=9080 --no-browser ./dist",
+    "serve:dist": "live-server --port=9080 --no-browser ./dist",
     "production": "node ./server.js",
     "lint": "npm run lint:eslint && npm run lint:css",
     "lint:eslint": "eslint -f ./node_modules/eslint-friendly-formatter \"{,**/}*.{js,vue}\"",
@@ -122,7 +122,7 @@
   },
   "dependencies": {
     "@colorplatform/color-api": "2.2.0",
-    "@colorplatform/color-keys": "2.0.3",
+    "@colorplatform/color-keys": "file:../color-keys",
     "@colorplatform/color-ledger": "0.1.0",
     "@sentry/browser": "5.0.3",
     "@syncfusion/ej2-vue-navigations": "17.2.41",

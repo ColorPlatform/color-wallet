@@ -77,10 +77,6 @@ async function actionModalCheckout(
     )
   )
 
-  // await next block to be sure about the sequence number
-  // TODO needs to be fixed and put into color-api
-  // await nextBlock(browser)
-
   // submit
   browser.click(".action-modal-footer .tm-btn")
   browser.setValue("#password", "1234567890")

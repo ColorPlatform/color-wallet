@@ -1,13 +1,13 @@
 "use strict"
 
-import Cosmos from "@colorplatform/color-api"
+import Color from "@colorplatformjs/color-api"
 import RpcWrapper from "./rpcWrapper.js"
 
 export default function Connector(stargateUrl) {
-  const cosmosClient = new Cosmos(stargateUrl, "no_address")
-  const newRpcClient = RpcWrapper(cosmosClient)
+  const client = new Color(stargateUrl, "no_address")
+  const newRpcClient = RpcWrapper(client)
 
-  Object.assign(cosmosClient, newRpcClient)
+  Object.assign(client, newRpcClient)
 
-  return cosmosClient
+  return client
 }

@@ -1,8 +1,8 @@
 {
   "name": "colorwallet",
   "productName": "Color",
-  "version": "1.0.0-beta.98",
-  "description": "Color Wallet is the user interface for the Color.",
+  "version": "1.0.0-rc",
+  "description": "Color Wallet is the user interface for the Color blockchain.",
   "author": "Color Platform Organization. <hello@color-platform.org>",
   "license": "Apache-2.0",
   "homepage": "https://wallet.color-platform.org/",
@@ -121,8 +121,8 @@
     "webpack-dev-server": "3.2.1"
   },
   "dependencies": {
-    "@colorplatform/color-api": "2.2.0",
-    "@colorplatform/color-keys": "file:../color-keys",
+    "@colorplatformjs/color-api": "2.3.0-rc",
+    "@colorplatformjs/color-keys": "2.1.0-rc",
     "@colorplatform/color-ledger": "0.1.0",
     "@sentry/browser": "5.0.3",
     "@syncfusion/ej2-vue-navigations": "17.2.41",

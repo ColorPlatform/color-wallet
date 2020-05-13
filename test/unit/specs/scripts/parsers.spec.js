@@ -13,8 +13,8 @@ const signedMessage = {
               denom: "CLR"
             }
           ],
-          from_address: "cosmos1ek9cd8ewgxg9w5xllq9um0uf4aaxaruvcw4v9e",
-          to_address: "cosmos1324vt5j3wzx0xsc32mjhkrvy5gn5ef2hrwcg29"
+          from_address: "color1ek9cd8ewgxg9w5xllq9um0uf4aaxaruvcw4v9e",
+          to_address: "color1324vt5j3wzx0xsc32mjhkrvy5gn5ef2hrwcg29"
         }
       }
     ],
@@ -27,7 +27,8 @@ const signedMessage = {
       ],
       gas: "39953"
     },
-    memo: "(Sent via Color Wallet)"
+    memo: "(Sent via Color Wallet)",
+    nonce: "12345"
   }
 }
 
@@ -44,8 +45,8 @@ const signedActionMessage = {
               denom: "CLR"
             }
           ],
-          from_address: "cosmos1ek9cd8ewgxg9w5xllq9um0uf4aaxaruvcw4v9e",
-          to_address: "cosmos1324vt5j3wzx0xsc32mjhkrvy5gn5ef2hrwcg29"
+          from_address: "color1ek9cd8ewgxg9w5xllq9um0uf4aaxaruvcw4v9e",
+          to_address: "color1324vt5j3wzx0xsc32mjhkrvy5gn5ef2hrwcg29"
         }
       }
     ],
@@ -58,7 +59,8 @@ const signedActionMessage = {
       ],
       gas: "39953"
     },
-    memo: "(Sent via Color Wallet)"
+    memo: "(Sent via Color Wallet)",
+    nonce: "12345"
   }
 }
 
@@ -70,12 +72,13 @@ describe(`parsers helper`, () => {
         value: {
           msg: "some message",
           fee: 0.01,
-          memo: "Sent from Color Wallet"
+          memo: "Sent from Color Wallet",
+          nonce: "12345"
         }
       }
     }
     expect(
-      parseTx(`{"msgs":"some message","fee":0.01,"memo":"Sent from Color Wallet"}`)
+      parseTx(`{"msgs":"some message","fee":0.01,"memo":"Sent from Color Wallet","nonce":"12345"}`)
     ).toMatchObject(shortMessage)
   })
 

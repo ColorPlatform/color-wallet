@@ -3,33 +3,33 @@ const stargate =
   process.env.STARGATE ||
   (dev
     ? `https://proxy.testnet.color-platform.rnssol.com:9071`
-    : `https://proxy.mainbeta-2.color-platform.org:9061`)
+    : `https://proxy.mainbeta-3.color-platform.org:9061`)
 
 const faucet =
   process.env.FAUCET ||
   (dev
     ? `https://proxy.testnet.color-platform.rnssol.com:8000/claim/wallet`
-    : `https://getcoins.mainbeta-2.color-platform.org/claim/wallet`)
+    : `https://getcoins.mainbeta-3.color-platform.org/claim/wallet`)
 
 const shorturl =
   process.env.SHORTURL ||
   (dev
     ? `https://s.testnet.color-platform.rnssol.com/encode/`
-    : `https://s.mainbeta-2.color-platform.org/encode/`)
+    : `https://s.mainbeta-3.color-platform.org/encode/`)
 
 const qrcode =
   process.env.QRCODE ||
   (dev
     ? `https://wallet.testnet.color-platform.rnssol.com`
-    : `https://wallet.mainbeta-2.color-platform.org`)
+    : `https://wallet.mainbeta-3.color-platform.org`)
 
 const rpc =
   process.env.RPC ||
   (dev
     ? `https://rpc.testnet.color-platform.rnssol.com`
-    : `https://rpc.mainbeta-2.color-platform.org`)
+    : `https://rpc.mainbeta-3.color-platform.org`)
 
-const chain = process.env.CHAIN || (dev ? `local-testnet` : `color-mainbeta-2`)
+const chain = process.env.CHAIN || (dev ? `local-testnet` : `color-mainbeta-3`)
 
 export default {
   name: `colorwallet`,

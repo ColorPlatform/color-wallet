@@ -19,7 +19,7 @@ const mockMsgWithdraw = jest.fn(() => ({
   send: () => ({ included: () => async () => true })
 }))
 
-jest.mock(`@colorplatform/color-api`, () => {
+jest.mock(`@colorplatformjs/color-api`, () => {
   return jest.fn().mockImplementation(() => {
     return {
       get: mockGet,

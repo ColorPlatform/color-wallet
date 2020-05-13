@@ -1,4 +1,4 @@
-import Cosmos from "@colorplatform/color-api"
+import Color from "@colorplatformjs/color-api"
 import config from "src/config"
 import { getSigner, getSignSigner } from "./signer"
 import transaction from "./transactionTypes"
@@ -13,7 +13,7 @@ import b32 from "scripts/b32"
 export default class ActionManager {
   constructor() {
     this.context = null
-    this.cosmos = null
+    this.color = null
     this.message = null
   }
 
@@ -22,7 +22,7 @@ export default class ActionManager {
       throw Error("Context cannot be empty")
     }
     this.context = context
-    this.cosmos = new Cosmos(this.context.url || "", this.context.chainId || "")
+    this.color = new Color(this.context.url || "", this.context.chainId || "")
   }
 
   readyCheck() {
@@ -59,7 +59,7 @@ export default class ActionManager {
 
     this.messageTypeCheck(type)
     this.messageType = type
-    this.message = this.cosmos[type](
+    this.message = this.color[type](
       this.context.userAddress,
       transactionProperties
     )
@@ -151,9 +151,9 @@ export default class ActionManager {
   // Withdrawing is a multi message for all validators you have bonds with
   createMultiMessage(type, senderAddress, { validatorAddresses }) {
     const messages = validatorAddresses.map(validatorAddress =>
-      this.cosmos[type](senderAddress, { validatorAddress })
+      this.color[type](senderAddress, { validatorAddress })
     )
-    return this.cosmos.MultiMessage(senderAddress, messages)
+    return this.color.MultiMessage(senderAddress, messages)
   }
 }
 

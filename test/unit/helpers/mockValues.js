@@ -39,7 +39,7 @@ const state = {
           amount: `10000000000`
         }
       ],
-      sequence: `1`,
+      nonce: `1`,
       account_number: `1`
     }
   },

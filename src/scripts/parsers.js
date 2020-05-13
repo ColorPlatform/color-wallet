@@ -1,7 +1,7 @@
 "use strict"
 
 export const parseTx = signMessage => {
-  const { msgs, fee, memo } = JSON.parse(signMessage)
+  const { msgs, fee, memo, nonce } = JSON.parse(signMessage)
 
   return {
     tx: {
@@ -9,7 +9,8 @@ export const parseTx = signMessage => {
       value: {
         msg: msgs,
         fee,
-        memo
+        memo,
+        nonce
       }
     }
   }

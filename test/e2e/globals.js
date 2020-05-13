@@ -2,7 +2,7 @@ const axios = require("axios")
 const chai = require("chai")
 chai.use(require("chai-string"))
 
-const HOST = "proxy.mainbeta-2.color-platform.org"
+const HOST = "proxy.3.color-platform.org"
 
 module.exports = {
   // controls the timeout time for async hooks. Expects the done() callback to be invoked within this time

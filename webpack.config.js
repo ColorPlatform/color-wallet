@@ -226,8 +226,8 @@ if (process.env.NODE_ENV === `production`) {
           `https://appzi-collector-b.azurewebsites.net`,
           `https://keybase.io`,
           // mainnet
-          `https://proxy.mainbeta-2.color-platform.org:9061`,
-          `wss://rpc.mainbeta-2.color-platform.org`,
+          `https://proxy.mainbeta-3.color-platform.org:9061`,
+          `wss://rpc.mainbeta-3.color-platform.org`,
           // `https://stargate.cosmos.network`,
           // `wss://rpc.cosmos.network:26657`,
           // testnet

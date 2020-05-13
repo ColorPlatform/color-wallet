@@ -119,7 +119,7 @@ describe(`Module: Wallet`, () => {
           account: jest.fn(() =>
             Promise.resolve({
               coins,
-              sequence: `1`,
+              nonce: `1`,
               account_number: `2`
             })
           )

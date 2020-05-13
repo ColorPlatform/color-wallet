@@ -31,13 +31,13 @@ while true; do
     fi
 done
 
-SEQUENCE=1
+NONCE=1
 
 echo "Funding rich account ${RICH_ADDRESS}"
-echo ${PASSWORD} | gaiacli tx send ${RICH_ADDRESS} 1000000000stake --from ${ACCOUNT} --chain-id ${NETWORK} --yes --home ${HOME} --node ${NODE} --sequence $SEQUENCE &> /dev/null
-SEQUENCE=$((SEQUENCE+1))
-echo ${PASSWORD} | gaiacli tx send ${RICH_ADDRESS} ${AMOUNTP} --from ${ACCOUNT} --chain-id ${NETWORK} --yes --home ${HOME} --node ${NODE} --sequence $SEQUENCE &> /dev/null
-SEQUENCE=$((SEQUENCE+1))
+echo ${PASSWORD} | gaiacli tx send ${RICH_ADDRESS} 1000000000stake --from ${ACCOUNT} --chain-id ${NETWORK} --yes --home ${HOME} --node ${NODE} --nonce $NONCE &> /dev/null
+NONCE=$((NONCE+1))
+echo ${PASSWORD} | gaiacli tx send ${RICH_ADDRESS} ${AMOUNTP} --from ${ACCOUNT} --chain-id ${NETWORK} --yes --home ${HOME} --node ${NODE} --nonce $NONCE &> /dev/null
+NONCE=$((NONCE+1))
 
 while true; do
     # Is anyone asking for money
@@ -54,15 +54,15 @@ while true; do
                 echo "$dt - $DESTINATION already funded, accounts are only funded once"
             else
                 # echo "color $AMOUNTS at $DESTINATION"
-                echo ${PASSWORD} | gaiacli tx send ${DESTINATION} ${AMOUNTS} --home ${HOME} --from ${ACCOUNT} --chain-id=${NETWORK} --yes --node ${NODE} --sequence $SEQUENCE &> /dev/null
+                echo ${PASSWORD} | gaiacli tx send ${DESTINATION} ${AMOUNTS} --home ${HOME} --from ${ACCOUNT} --chain-id=${NETWORK} --yes --node ${NODE} --nonce $NONCE &> /dev/null
                 if [ ! $? -eq 0 ]; then
                     echo "!!Funding didn't work!!"
                     continue
                 fi
-                SEQUENCE=$((SEQUENCE+1))
+                NONCE=$((NONCE+1))
                 # echo "photino $AMOUNTP at $DESTINATION"
-                # echo ${PASSWORD} | gaiacli tx send ${DESTINATION} ${AMOUNTP} --home ${HOME} --from ${ADDRESS} --chain-id=${NETWORK} --yes --node ${NODE} --sequence $SEQUENCE
-                # SEQUENCE=$((SEQUENCE+1))
+                # echo ${PASSWORD} | gaiacli tx send ${DESTINATION} ${AMOUNTP} --home ${HOME} --from ${ADDRESS} --chain-id=${NETWORK} --yes --node ${NODE} --nonce $NONCE
+                # NONCE=$((NONCE+1))
                 echo "$dt - $DESTINATION funded, enjoy!"
             fi
 

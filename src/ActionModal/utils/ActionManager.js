@@ -4,7 +4,6 @@ import { getSigner, getSignSigner } from "./signer"
 import transaction from "./transactionTypes"
 import { uatoms } from "scripts/num.js"
 import verifySignature from "@colorplatformjs/color-keys"
-import b32 from "scripts/b32"
 
 export default class ActionManager {
   constructor() {

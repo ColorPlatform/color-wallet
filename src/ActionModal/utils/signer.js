@@ -99,6 +99,10 @@ export function getSignSigner(
         }
       }
     ]
-    return signWithExtension(JSON.stringify(message[0].signMessage), address,message[0].signMessage.msgs[0].type)
+    return signWithExtension(
+      JSON.stringify(message[0].signMessage),
+      address,
+      message[0].signMessage.msgs[0].type
+    )
   }
 }

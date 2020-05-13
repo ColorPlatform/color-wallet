@@ -3,7 +3,7 @@ import {
   signWithPrivateKey,
   getStoredWallet,
   signWithPrivateKeywallet
-} from "@colorplatform/color-keys"
+} from "@colorplatformjs/color-keys"
 import { signWithExtension } from "src/scripts/extension-utils"
 
 export function getSigner(config, submitType = "", { address, password }) {

@@ -78,7 +78,9 @@ describe(`parsers helper`, () => {
       }
     }
     expect(
-      parseTx(`{"msgs":"some message","fee":0.01,"memo":"Sent from Color Wallet","nonce":"12345"}`)
+      parseTx(
+        `{"msgs":"some message","fee":0.01,"memo":"Sent from Color Wallet","nonce":"12345"}`
+      )
     ).toMatchObject(shortMessage)
   })
 

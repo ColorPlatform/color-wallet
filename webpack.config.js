@@ -40,9 +40,7 @@ const config = {
         use: {
           loader: `babel-loader`,
           options: {
-            plugins: [
-                "@babel/plugin-syntax-dynamic-import"
-            ]
+            plugins: ["@babel/plugin-syntax-dynamic-import"]
           }
         },
         include: [path.resolve(__dirname, `src`)],
@@ -216,7 +214,11 @@ if (process.env.NODE_ENV === `production`) {
         "object-src": `'none'`,
         "base-uri": `'self'`,
         "default-src": `'self'`,
-        "script-src": [`'self'`, `https://app.appzi.io/`, `https://*.color-platform.org`],
+        "script-src": [
+          `'self'`,
+          `https://app.appzi.io/`,
+          `https://*.color-platform.org`
+        ],
         "worker-src": `'none'`,
         // 'style-src': production ? `'self'` : `*`, // SECURITY Appzi is applying styles inline, inquired to them already
         "style-src": [`'self'`, `'unsafe-inline'`],
@@ -227,7 +229,7 @@ if (process.env.NODE_ENV === `production`) {
           `https://keybase.io`,
           // mainnet
           `https://proxy.mainbeta-3.color-platform.org:9061`,
-          `wss://rpc.mainbeta-3.color-platform.org`,
+          `wss://rpc.mainbeta-3.color-platform.org`
           // `https://stargate.cosmos.network`,
           // `wss://rpc.cosmos.network:26657`,
           // testnet

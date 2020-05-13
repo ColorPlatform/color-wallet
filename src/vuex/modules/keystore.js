@@ -7,7 +7,7 @@ import {
   getNewWalletFromSeed,
   testPassword,
   storeWallet
-} from "@colorplatform/color-keys"
+} from "@colorplatformjs/color-keys"
 
 export default () => {
   const state = {

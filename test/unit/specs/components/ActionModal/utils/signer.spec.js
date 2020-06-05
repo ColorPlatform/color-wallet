@@ -9,7 +9,7 @@ jest.mock("@colorplatformjs/color-keys", () => ({
   })
 }))
 
-jest.mock(`@colorplatform/color-ledger`, () => {
+jest.mock(`@colorplatformjs/color-ledger`, () => {
   return jest.fn().mockImplementation(() => {
     return {
       getKey: () => () => Buffer.alloc(0),

@@ -41,7 +41,12 @@ class Client extends EventEmitter {
     // }
 
     this.websocket = true
-    this.uri = `${protocol}//${hostname}/websocket`
+    if (port) {
+      this.uri = `${protocol}//${hostname}:${port}/websocket`
+    } else {
+      this.uri = `${protocol}//${hostname}/websocket`
+    }
+    
     this.call = this.callWs
     this.connectWs()
   }

@@ -121,9 +121,9 @@
     "webpack-dev-server": "3.2.1"
   },
   "dependencies": {
-    "@colorplatformjs/color-api": "2.3.0-rc",
+    "@colorplatformjs/color-api": "2.3.1-rc",
     "@colorplatformjs/color-keys": "2.1.0-rc",
-    "@colorplatform/color-ledger": "0.1.0",
+    "@colorplatformjs/color-ledger": "0.1.0",
     "@sentry/browser": "5.0.3",
     "@syncfusion/ej2-vue-navigations": "17.2.41",
     "autosize": "4.0.2",

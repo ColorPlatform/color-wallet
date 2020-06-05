@@ -1,5 +1,5 @@
 import config from "src/config"
-import Ledger from "@colorplatform/color-ledger"
+import Ledger from "@colorplatformjs/color-ledger"
 
 export default () => {
   const emptyState = {}

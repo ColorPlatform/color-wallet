@@ -1,4 +1,5 @@
-import Ledger from "@colorplatform/color-ledger"
+// TODO add ledger support
+import Ledger from "@colorplatformjs/color-ledger"
 import {
   signWithPrivateKey,
   getStoredWallet,

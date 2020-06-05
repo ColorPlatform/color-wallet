@@ -5,7 +5,13 @@ if [ "$1" = "staging" ]
 then
   echo Building wallet with staging Enviorment
 
- QRCODE=https://wallet.testnet.color-platform.rnssol.com FAUCET=https://proxy.testnet.color-platform.rnssol.com:8000/claim/wallet SHORTURL=https://s.testnet.color-platform.rnssol.com/encode/ CHAIN=local-testnet STARGATE=https://proxy.testnet.color-platform.rnssol.com:9071 RPC=https://rpc.testnet.color-platform.rnssol.com yarn build
+  export QRCODE=https://localhost:10001
+  export FAUCET=https://localhost:10002
+  export SHORTURL=https://localhost:1003/encode/ 
+  export CHAIN=localhost-testnet 
+  export STARGATE=http://localhost:1317 
+  export RPC=http://localhost:37001 
+  yarn build
 
 elif [ "$1" = "production" ]
 then

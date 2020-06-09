@@ -3,59 +3,86 @@
     <div class="row">
       <div class="col-lg-12">
         <h3>Total {{ num.viewDenom(bondDenom) }}:</h3>
-        <h2 class="total-atoms__value color">{{ totalAtomsDisplay | prettyLong }}</h2>
+        <h2 class="total-atoms__value color">
+          {{ totalAtomsDisplay | prettyLong }}
+        </h2>
       </div>
     </div>
     <b-progress v-if="hidebar" class="mt-2" :max="max" show-value>
       <b-progress-bar
-        :value="((num.atoms(liquidAtoms)) *100 ) / (num.atoms(totalAtoms))"
-        :label="`${(((num.atoms(liquidAtoms)) *100 ) / (num.atoms(totalAtoms))).toFixed(2)}%`"
+        :value="(num.atoms(liquidAtoms) * 100) / num.atoms(totalAtoms)"
+        :label="
+          `${((num.atoms(liquidAtoms) * 100) / num.atoms(totalAtoms)).toFixed(
+            2
+          )}%`
+        "
         variant="success"
         animated
       ></b-progress-bar>
       <b-progress-bar
-        :value="((num.atoms(oldBondedAtoms))*100) / (num.atoms(totalAtoms))"
-        :label="`${(((num.atoms(oldBondedAtoms))*100) / (num.atoms(totalAtoms))).toFixed(2)}%`"
+        :value="(num.atoms(oldBondedAtoms) * 100) / num.atoms(totalAtoms)"
+        :label="
+          `${(
+            (num.atoms(oldBondedAtoms) * 100) /
+            num.atoms(totalAtoms)
+          ).toFixed(2)}%`
+        "
         variant="warning"
         animated
       ></b-progress-bar>
       <b-progress-bar
-        :value="((num.atoms(oldUnbondingAtoms))*100) / (num.atoms(totalAtoms))"
-        :label="`${(((num.atoms(oldUnbondingAtoms))*100) / (num.atoms(totalAtoms))).toFixed(2)}%`"
+        :value="(num.atoms(oldUnbondingAtoms) * 100) / num.atoms(totalAtoms)"
+        :label="
+          `${(
+            (num.atoms(oldUnbondingAtoms) * 100) /
+            num.atoms(totalAtoms)
+          ).toFixed(2)}%`
+        "
         variant="danger"
         animated
       ></b-progress-bar>
     </b-progress>
     <div class="row textalign">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment unbonded-atoms">
-        
-        <h3><p class="green"></p>Liquid {{ num.viewDenom(bondDenom) }}:</h3>
+      <div
+        class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment unbonded-atoms"
+      >
+        <h3>
+          <p class="green"></p>
+          Liquid {{ num.viewDenom(bondDenom) }}:
+        </h3>
         <h2 class="color">{{ unbondedAtoms | prettyLong }}</h2>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment">
-        
-        <h3><p class="blue"></p>Delegated {{ num.viewDenom(bondDenom) }}:</h3>
+        <h3>
+          <p class="blue"></p>
+          Delegated {{ num.viewDenom(bondDenom) }}:
+        </h3>
         <h2 class="color">{{ delegated | prettyLong }}</h2>
       </div>
-       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment">
-        <h3><p class="purple"></p>Pending {{ num.viewDenom(bondDenom) }}:</h3>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment">
+        <h3>
+          <p class="purple"></p>
+          Pending {{ num.viewDenom(bondDenom) }}:
+        </h3>
         <h2 class="color">{{ unbondingAtoms | prettyLong }}</h2>
       </div>
-      <div v-if="rewards" class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment display">
+      <div
+        v-if="rewards"
+        class="col-lg-3 col-md-6 col-sm-6 col-xs-12 alignment display"
+      >
         <h3 class="margintop">Available Rewards:</h3>
         <!-- <h2 class="color topleft">{{ rewards }}  -->
-          <TmBtn
-            id="withdraw-btn"
-            :value="rewards"
-            :disabled="!readyToWithdraw"
-            :to="''"
-            type="anchor"
-            color="primary"
-            class="withdrawbtn"
-            @click.native="readyToWithdraw && onWithdrawal()"
-          />
-          <!-- </h2> -->
-       
+        <TmBtn
+          id="withdraw-btn"
+          :value="rewards"
+          :disabled="!readyToWithdraw"
+          :to="''"
+          type="anchor"
+          color="primary"
+          class="withdrawbtn"
+          @click.native="readyToWithdraw && onWithdrawal()"
+        />
+        <!-- </h2> -->
       </div>
     </div>
     <ModalWithdrawRewards
@@ -68,14 +95,18 @@
 <script>
 import num from "scripts/num"
 import { mapGetters } from "vuex"
-import { atoms as toAtoms , prettyLong} from "../../scripts/num.js"
+import { atoms as toAtoms, prettyLong } from "../../scripts/num.js"
 import ModalWithdrawRewards from "src/ActionModal/components/ModalWithdrawRewards"
 import TmBtn from "./TmBtn"
 import "bootstrap/dist/css/bootstrap.css"
 
 export default {
   name: `tm-balance`,
-  components: {TmBtn,ModalWithdrawRewards},
+  components: { TmBtn, ModalWithdrawRewards },
+  filters: {
+    toAtoms,
+    prettyLong
+  },
   data() {
     return {
       num,
@@ -83,10 +114,6 @@ export default {
       value: 0,
       max: 100
     }
-  },
-  filters: {
-    toAtoms,
-    prettyLong
   },
   computed: {
     ...mapGetters([
@@ -110,7 +137,10 @@ export default {
       return this.wallet.loaded && this.delegation.loaded
     },
     hidebar() {
-      return this.num.atoms(this.totalAtoms) || this.num.atoms(this.liquidAtoms) !== 0
+      return (
+        this.num.atoms(this.totalAtoms) ||
+        this.num.atoms(this.liquidAtoms) !== 0
+      )
     },
     totalAtomsDisplay() {
       return this.loaded ? this.num.atoms(this.totalAtoms) : `--`
@@ -121,8 +151,8 @@ export default {
     unbondingAtoms() {
       return this.loaded ? this.num.atoms(this.oldUnbondingAtoms) : `--`
     },
-    delegated(){
-      return this.loaded ? (this.num.atoms(this.oldBondedAtoms)) : `--`
+    delegated() {
+      return this.loaded ? this.num.atoms(this.oldBondedAtoms) : `--`
     },
     readyToWithdraw() {
       return this.totalRewards > 0
@@ -135,11 +165,11 @@ export default {
       return this.num.fullDecimals(
         this.num.atoms(rewards && rewards > 10 ? rewards : 0)
       )
-    },
+    }
     // LiquidbarValue() {
     //   if (this.num.atoms(this.totalAtoms) === 0)
     //     return 0
-    //   else 
+    //   else
     //     return (((this.num.atoms(this.liquidAtoms)) * 100) / (this.num.atoms(this.totalAtoms)))
     // }
   },
@@ -159,6 +189,13 @@ export default {
       }
     }
   },
+  mounted() {
+    this.totalAtoms
+    this.oldBondedAtoms
+    this.oldUnbondingAtoms
+    this.committedDelegations
+    this.delegates
+  },
   methods: {
     update(height) {
       this.lastUpdate = height
@@ -173,14 +210,7 @@ export default {
     },
     onWithdrawal() {
       this.$refs.ModalWithdrawRewards.open()
-    },
-  },
-  mounted(){
-    this.totalAtoms
-    this.oldBondedAtoms
-    this.oldUnbondingAtoms
-    this.committedDelegations
-    this.delegates
+    }
   }
 }
 </script>
@@ -199,28 +229,29 @@ export default {
 } */
 
 .margintop {
-  margin-top: 0.2rem !important
+  margin-top: 0.2rem !important;
 }
 
 h3 {
   color: black !important;
   font-size: 1rem !important;
   display: inline;
+
   /* line-height: 1.2; */
 }
 
 .topleft {
   margin-top: 0.2rem;
-  margin-left: 0.3rem
+  margin-left: 0.3rem;
 }
 
 .textalign {
-  text-align: left
+  text-align: left;
 }
 
 .withdrawbtn {
-  margin-bottom: .5rem;
-  margin-left: .5rem
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .col-md-4 {
@@ -237,7 +268,7 @@ h2 {
   display: inline;
   margin-bottom: 0.5rem;
   overflow: hidden;
-  font-weight: 500
+  font-weight: 500;
 }
 
 .displayinline {
@@ -282,7 +313,7 @@ h2 {
 
 p {
   margin-bottom: 0 !important;
-  margin-top: 2px
+  margin-top: 2px;
 }
 
 .total-atoms.top-section {
@@ -326,13 +357,13 @@ p {
 @media screen and (max-width: 867px) {
   .col-md-4 {
     display: flex;
-    max-width: none
+    max-width: none;
   }
 }
 
 @media screen and (max-width: 768px) {
   .display {
-    display: block
+    display: block;
   }
 }
 
@@ -342,8 +373,9 @@ p {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
 }
-}
+
 /* TODO fix scaling on medium sized screens and pick proper break point */
 @media screen and (max-width: 550px) {
   .header-balance {
@@ -367,7 +399,7 @@ p {
 
 @media screen and (max-width: 320px) {
   .withdrawbtn {
-    margin-left: 0rem !important
+    margin-left: 0 !important;
   }
 }
 </style>

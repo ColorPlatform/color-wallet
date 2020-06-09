@@ -7,8 +7,8 @@
       </i>
     </a>
     <TmBtn
-      id="sign-in"
       v-if="!session.signedIn"
+      id="sign-in"
       class="sign-in-button"
       value="Sign In"
       color="primary"
@@ -38,8 +38,8 @@ export default {
     },
     signOut() {
       this.$store.dispatch(`signOut`)
-      localStorage.setItem(`qraddress`,undefined)
-      localStorage.setItem(`qramount`,undefined)
+      localStorage.setItem(`qraddress`, undefined)
+      localStorage.setItem(`qramount`, undefined)
     }
   }
 }
@@ -48,6 +48,7 @@ export default {
 .tool-bar {
   display: flex;
   align-items: center;
+
   /* max-height: 2rem; */
   justify-content: flex-end;
   width: 100%;

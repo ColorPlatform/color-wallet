@@ -4,7 +4,7 @@
  * Extracted from https://github.com/nomic-io/js-tendermint
  * TODO missing tests
  */
-import {rpc} from "../../src/config"
+import { rpc } from "../../src/config"
 const EventEmitter = require(`events`)
 const url = require(`url`)
 const old = require(`old`)
@@ -35,7 +35,7 @@ class Client extends EventEmitter {
     let { protocol, hostname, port } = url.parse(uriString)
 
     // default port
-    
+
     // if (!port) {
     //   port = 26657
     // }
@@ -46,7 +46,7 @@ class Client extends EventEmitter {
     } else {
       this.uri = `${protocol}//${hostname}/websocket`
     }
-    
+
     this.call = this.callWs
     this.connectWs()
   }

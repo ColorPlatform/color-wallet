@@ -41,8 +41,7 @@ const nightwatch_config = {
   test_settings: {
     default: {
       silent: true,
-      filter: ["explorer.spec.js",
-      "signin.spec.js"]
+      filter: ["explorer.spec.js", "signin.spec.js"]
     }
   }
 }
